@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { UIContext } from "../../contexts/UIProvider/UIProvider";
 import Navbar from "../../components/Navbar";
 import { StarsCanvas } from "../../components/canvas";
+import ParticlesBackground from "./particles/ParticlesBackground";
 const Parent = () => {
   const { theme } = useContext(UIContext);
   let isPlayedWelcomeSound = false;
@@ -27,12 +28,13 @@ const Parent = () => {
   }, []);
 
   return (
-    <div className={`${theme === "dark" && "dark"} relative z-0 bg-primary`}>
+    <div className={`${theme === "dark" && "dark"} relative z-0 `}>
       <Navbar />
       <div className="max-w-[1440px] mx-auto">
         <Outlet />
       </div>
       {/* <StarsCanvas /> */}
+      {/* <ParticlesBackground /> */}
     </div>
   );
 };
