@@ -78,7 +78,7 @@ function ClientReview() {
             <p className={`${styles.sectionSubText} `}>Testimonials</p>
             <h2 className={`${styles.sectionHeadText}`}>Reviews.</h2>
           </motion.div>
-          <div className=" hidden lg:block">
+          <div className=" hidden lg:block ">
             <div className="flex  justify-between">
               {data.map((item, index) => (
                 <EachReview

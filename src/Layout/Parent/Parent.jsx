@@ -2,8 +2,6 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { UIContext } from "../../contexts/UIProvider/UIProvider";
 import Navbar from "../../components/Navbar";
-import { StarsCanvas } from "../../components/canvas";
-import ParticlesBackground from "./particles/ParticlesBackground";
 const Parent = () => {
   const { theme } = useContext(UIContext);
   let isPlayedWelcomeSound = false;
@@ -33,8 +31,6 @@ const Parent = () => {
       <div className="max-w-[1440px] mx-auto">
         <Outlet />
       </div>
-      {/* <StarsCanvas /> */}
-      {/* <ParticlesBackground /> */}
     </div>
   );
 };

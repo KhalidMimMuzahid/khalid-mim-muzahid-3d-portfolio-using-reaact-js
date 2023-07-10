@@ -70,6 +70,7 @@ const Contact = () => {
         <p className={`${styles.sectionSubText} `}>Get in touch</p>
         <h2 className={`${styles.sectionHeadText}`}>Contact..</h2>
       </motion.div>
+
       <div
         className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
       >

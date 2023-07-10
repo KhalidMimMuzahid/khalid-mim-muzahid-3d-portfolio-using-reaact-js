@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
-
+import "./hero.css";
 const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto `}>
@@ -10,15 +10,16 @@ const Hero = () => {
         className={`absolute inset-0 top-[80px]  mx-auto ${styles.paddingX} flex flex-row items-start gap-5 `}
       >
         <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1  h-28 xs:h-40  sm:h-80 bg-gradient-to-b from-[#915EFF] to-transparent" />
+          <div className="w-5 h-5 rounded-full bg-[#2243fa]" />
+          <div className="w-1  h-28 xs:h-40  sm:h-80 bg-gradient-to-b from-[#2243fa] to-transparent" />
         </div>
 
         <div className=" w-full">
           <h1
             className={`font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 text-white`}
           >
-            Hi, I'm <span className="text-[#915EFF]">Khalid</span>
+            Hi, I'm{" "}
+            <span className="text-[#2243fa] hover:cursor-pointer">Khalid</span>
           </h1>
           <div className="relative">
             <div className="text-[#ffffff] text-[18px] xs:text-[22px] sm:text-[30px] lg:text-[48px] my-2">
@@ -39,6 +40,7 @@ const Hero = () => {
               <p className="invisible">This is my introduction</p>
             </div>
           </div>
+          <button className="neon-button hover:text-white ">Resume</button>
         </div>
       </div>
       <ComputersCanvas />

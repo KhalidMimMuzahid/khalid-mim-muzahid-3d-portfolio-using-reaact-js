@@ -60,3 +60,155 @@
 #sidenavbarformobile ul li:last-child::after {
   box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
 }
+
+#topnavbarfordesktop .outer {
+  position: relative;
+  margin: 0 0px;
+  background: #111;
+}
+#topnavbarfordesktop .button {
+  height: 37px;
+  width: 97px;
+  border-radius: 50px;
+}
+
+#topnavbarfordesktop .outer a,
+#topnavbarfordesktop .outer span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#topnavbarfordesktop .outer a {
+  background: #111;
+  /* color: #f2f2f2; */
+  outline: none;
+  border: none;
+  font-size: 14px;
+  z-index: 9;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#topnavbarfordesktop .button a {
+  height: 30px;
+  width: 90px;
+  border-radius: 50px;
+}
+
+#topnavbarfordesktop .outer span {
+  height: 100%;
+  width: 100%;
+  background: inherit;
+}
+#topnavbarfordesktop .button span {
+  border-radius: 50px;
+}
+
+#topnavbarfordesktop .outer:hover span:nth-child(1) {
+  filter: blur(7px);
+}
+#topnavbarfordesktop .outer:hover span:nth-child(2) {
+  filter: blur(14px);
+}
+#topnavbarfordesktop .outer:hover {
+  background: linear-gradient(#2243fa, #3bff5a, #ff00e0);
+  animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+/* my name colo animation effect  */
+#brand-name-color-effect {
+  /* position: absolute; */
+  background: linear-gradient(90deg, #2243fa, #3bff5a, #ff00e0, #2243fa);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  animation: animate 10s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+
+/* for the toggl button  */
+
+#toggle-for-dark-mood label {
+  width: 100px;
+  height: 40px;
+  position: relative;
+  top: -45px;
+  display: block;
+  background: #ebebeb;
+  border-radius: 50px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+#toggle-for-dark-mood label:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 180px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+#toggle-for-dark-mood input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+#toggle-for-dark-mood input:checked + label {
+  background: #242424;
+}
+#toggle-for-dark-mood input:checked + label:after {
+  left: 90px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+#toggle-for-dark-mood label,
+label:after {
+  transition: 0.3s;
+}
+#toggle-for-dark-mood label:active:after {
+  width: 30px;
+}
+#toggle-for-dark-mood label svg {
+  position: absolute;
+  width: 25px;
+  top: 7px;
+  z-index: 1;
+}
+#toggle-for-dark-mood label svg.sun {
+  left: 8px;
+  fill: #fff;
+  transition: 0.3s;
+}
+#toggle-for-dark-mood label svg.moon {
+  height: 30px;
+  left: 63px;
+  top: 4px;
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+#toggle-for-dark-mood input:checked + label svg.sun {
+  fill: #7e7e7e;
+}
+#toggle-for-dark-mood input:checked + label svg.moon {
+  fill: #fff;
+}
