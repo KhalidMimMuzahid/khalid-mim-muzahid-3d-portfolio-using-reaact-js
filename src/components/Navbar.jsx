@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { logoDarkMode, logoLightMode, menu, close } from "../assets";
 import { motion, AnimatePresence } from "framer-motion";
 import Hamburger from "hamburger-react";
 import "./navbar.css";
+import { UIContext } from "../contexts/UIProvider/UIProvider";
 const Navbar = () => {
+  const { theme, setTheme } = useContext(UIContext);
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -32,10 +33,14 @@ const Navbar = () => {
       className={` ${
         styles.paddingX
       } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+        scrolled
+          ? theme === "dark"
+            ? "bg-primary"
+            : "bg-[#F0F5F9]"
+          : "bg-transparent"
       }`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="w-full flex justify-between items-center max-w-[1320px] mx-auto">
         <Link
           to="/"
           className="flex items-center gap-2 "
@@ -44,10 +49,18 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <img
+            src={theme === "dark" ? logoDarkMode : logoLightMode}
+            alt="logo"
+            className="w-9 h-9 object-contain"
+          />
           <p
             className="text-white text-[24px] font-bold cursor-pointer flex "
-            id="brand-name-color-effect"
+            id={
+              theme === "dark"
+                ? "brand-name-color-effect-dark-mode"
+                : "brand-name-color-effect-light-mode"
+            }
           >
             Khalid &nbsp;
             <span className="lg:block hidden "> Mim Muzahid</span>
@@ -80,7 +93,22 @@ const Navbar = () => {
         </ul>
         <div className=" flex   items-center">
           <div className=" h-[0px]" id="toggle-for-dark-mood">
-            <input type="checkbox" id="darkmode-toggle" />
+            <input
+              checked={theme === "dark"}
+              type="checkbox"
+              id="darkmode-toggle"
+              onChange={() =>
+                setTheme((prev) => {
+                  if (prev === "light") {
+                    localStorage.setItem("theme", "dark");
+                    return "dark";
+                  } else {
+                    localStorage.setItem("theme", "light");
+                    return "light";
+                  }
+                })
+              }
+            />
             <label for="darkmode-toggle">
               <svg
                 fill="#000000"

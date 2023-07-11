@@ -1,6 +1,7 @@
 :root {
-  --clr-neon: #2243fa;
-  --clr-bg: hsl(323 21% 16%);
+  --clr-neon-for-dark-mode: #2243fa;
+  --clr-Black-for-light-mode: #1e2022;
+  --clr-bg-for-dark: #2243fa;
 }
 
 *,
@@ -8,29 +9,32 @@
 *::after {
   box-sizing: border-box;
 }
-.neon-button {
+
+/* for the dark mode  */
+.neon-button-dark-mode {
   font-size: 24px;
 
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
-  color: var(--clr-neon);
-  border: var(--clr-neon) 0.125em solid;
+  color: var(--clr-neon-for-dark-mode);
+  border: var(--clr-neon-for-dark-mode) 0.125em solid;
   padding: 0.25em 1em;
   border-radius: 0.25em;
   z-index: 1;
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
 
-  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon-for-dark-mode),
+    0 0 0.5em 0 var(--clr-neon-for-dark-mode);
 
   position: relative;
 }
 
-.neon-button::before {
+.neon-button-dark-mode::before {
   pointer-events: none;
   content: "";
   position: absolute;
-  background: var(--clr-neon);
+  background: var(--clr-neon-for-dark-mode);
   top: 120%;
   left: 0;
   width: 100%;
@@ -41,33 +45,99 @@
   opacity: 0.7;
 }
 
-.neon-button::after {
+.neon-button-dark-mode::after {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  box-shadow: 0 0 2em 0.5em var(--clr-neon-for-dark-mode);
   opacity: 0;
-  background-color: var(--clr-neon);
+  background-color: var(--clr-neon-for-dark-mode);
   z-index: -1;
   transition: opacity 100ms linear;
 }
 
-.neon-button:hover,
-.neon-button:focus {
-  color: var(--clr-bg);
+.neon-button-dark-mode:hover,
+.neon-button-dark-mode:focus {
+  color: var(--clr-bg-for-dark);
   text-shadow: none;
   color: white;
   font-weight: 400;
 }
 
-.neon-button:hover::before,
-.neon-button:focus::before {
+.neon-button-dark-mode:hover::before,
+.neon-button-dark-mode:focus::before {
   opacity: 1;
 }
-.neon-button:hover::after,
-.neon-button:focus::after {
+.neon-button-dark-mode:hover::after,
+.neon-button-dark-mode:focus::after {
+  opacity: 1;
+}
+
+/* for the light mode  */
+.black-button-light-mode {
+  font-size: 24px;
+
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-Black-for-light-mode);
+  border: var(--clr-Black-for-light-mode) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  z-index: 1;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-Black-for-light-mode),
+    0 0 0.5em 0 var(--clr-Black-for-light-mode);
+
+  position: relative;
+}
+
+.black-button-light-mode::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-Black-for-light-mode);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.black-button-light-mode::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-Black-for-light-mode);
+  opacity: 0;
+  background-color: var(--clr-Black-for-light-mode);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.black-button-light-mode:hover,
+.black-button-light-mode:focus {
+  color: var(--clr-bg-for-dark);
+  text-shadow: none;
+  color: white;
+  font-weight: 400;
+}
+
+.black-button-light-mode:hover::before,
+.black-button-light-mode:focus::before {
+  opacity: 1;
+}
+.black-button-light-mode:hover::after,
+.black-button-light-mode:focus::after {
   opacity: 1;
 }

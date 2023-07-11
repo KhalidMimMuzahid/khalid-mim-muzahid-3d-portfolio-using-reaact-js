@@ -1,7 +1,9 @@
-import { useCallback } from "react";
+import { useCallback, useContext } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
+import { UIContext } from "../../../contexts/UIProvider/UIProvider";
 const ParticlesBackground = () => {
+  const { theme } = useContext(UIContext);
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -13,8 +15,7 @@ const ParticlesBackground = () => {
   const particlesLoaded = useCallback(async (container) => {
     await console.log(container);
   }, []);
-
-  return (
+  const forDark = (
     <Particles
       id="tsparticles"
       init={particlesInit}
@@ -607,6 +608,9 @@ const ParticlesBackground = () => {
       }}
     />
   );
+
+  // return theme === "dark" && forDark;
+  return forDark;
 };
 
 export default ParticlesBackground;

@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 export const UIContext = createContext();
 
 const UIProvider = ({ children }) => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   useEffect(() => {
     const newTheme = localStorage.getItem("theme");
     if (newTheme) {

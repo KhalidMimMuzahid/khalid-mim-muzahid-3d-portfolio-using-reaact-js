@@ -8,7 +8,7 @@ const Parent = () => {
   let audio = new Audio("welcome.mp3");
   const playAudio = () => {
     if (audio?.play && !isPlayedWelcomeSound) {
-      audio?.play();
+      // audio?.play();
 
       isPlayedWelcomeSound = true;
       console.log("after");
@@ -26,10 +26,12 @@ const Parent = () => {
   }, []);
 
   return (
-    <div className={`${theme === "dark" && "dark"} relative z-0 `}>
-      <Navbar />
-      <div className="max-w-[1440px] mx-auto">
-        <Outlet />
+    <div className={theme}>
+      <div className={`relative z-0 `}>
+        <Navbar />
+        <div className="max-w-[1440px] mx-auto">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
