@@ -164,10 +164,10 @@
 /* for the toggl button  */
 
 #toggle-for-dark-mood label {
-  width: 100px;
-  height: 40px;
+  width: 80px;
+  height: 38px;
   position: relative;
-  top: -45px;
+  top: -43px;
   display: block;
   background: #ebebeb;
   border-radius: 50px;
@@ -195,7 +195,7 @@
   background: #242424;
 }
 #toggle-for-dark-mood input:checked + label:after {
-  left: 90px;
+  left: 75px;
   transform: translateX(-100%);
   background: linear-gradient(180deg, #777, #3a3a3a);
 }
@@ -219,7 +219,7 @@ label:after {
 }
 #toggle-for-dark-mood label svg.moon {
   height: 30px;
-  left: 63px;
+  left: 48px;
   top: 4px;
   fill: #7e7e7e;
   transition: 0.3s;
@@ -230,3 +230,150 @@ label:after {
 #toggle-for-dark-mood input:checked + label svg.moon {
   fill: #fff;
 }
+
+/* for sound sound on off button  */
+/* #262626  */
+
+/* #050816 */
+#sound-toggle-button .button {
+  /* position: fixed;
+  bottom: 0px; */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  background-color: transparent;
+  background-image: linear-gradient(145deg, #171717, #444245);
+  box-sizing: border-box;
+  box-shadow: inset 1px 1px 0 #7d7c7e, inset -1px -1px 0px #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sound-toggle-button .button:hover {
+  cursor: grab;
+}
+#sound-toggle-button input {
+  display: none;
+}
+#sound-toggle-button .button::before {
+  position: absolute;
+  content: "";
+  width: 38px;
+  height: 38px;
+  border-radius: inherit;
+  background-color: transparent;
+  background-image: linear-gradient(145deg, #262626, #3b3b3b);
+  z-index: -1;
+  box-shadow: 10px 10px 20px #141414, -5px -5px 20px #3d3d3d;
+}
+#sound-toggle-button .button .icon {
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sound-toggle-button .button .icon svg {
+  height: 100%;
+  width: 100%;
+  fill: #ff3b3bcc;
+  position: relative;
+  top: 4px;
+  left: 2px;
+}
+
+#sound-toggle-button input:checked + .button {
+  box-shadow: inset -1px -1px 0 #5e5e5e, inset 1px 1px 0 #1c1c1c;
+  border: 2px solid rgba(0, 214, 29, 0.877);
+  animation: animeBorder 0.3s linear alternate-reverse infinite;
+}
+#sound-toggle-button input:checked + .button .icon svg {
+  fill: rgb(0, 214, 29);
+  animation: animeFill 0.3s linear alternate-reverse infinite;
+}
+@keyframes animeBorder {
+  to {
+    border-color: rgba(0, 214, 29, 0.233);
+  }
+}
+/* @keyframes animeFill {
+  to {
+    fill: rgba(0, 214, 29, 0.233);
+  }
+} */
+
+/* for music on off  */
+/* music-toggle-button */
+
+#music-toggle-button .button {
+  /* position: fixed;
+  bottom: 0px; */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  background-color: transparent;
+  background-image: linear-gradient(145deg, #171717, #444245);
+  box-sizing: border-box;
+  box-shadow: inset 1px 1px 0 #7d7c7e, inset -1px -1px 0px #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#music-toggle-button .button:hover {
+  cursor: grab;
+}
+#music-toggle-button input {
+  display: none;
+}
+#music-toggle-button .button::before {
+  position: absolute;
+  content: "";
+  width: 38px;
+  height: 38px;
+  border-radius: inherit;
+  background-color: transparent;
+  background-image: linear-gradient(145deg, #262626, #3b3b3b);
+  z-index: -1;
+  box-shadow: 10px 10px 20px #141414, -5px -5px 20px #3d3d3d;
+}
+#music-toggle-button .button .icon {
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#music-toggle-button .button .icon svg {
+  height: 100%;
+  width: 100%;
+  fill: #ff3b3bcc;
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+#music-toggle-button input:checked + .button {
+  box-shadow: inset -1px -1px 0 #5e5e5e, inset 1px 1px 0 #1c1c1c;
+  border: 2px solid rgba(0, 214, 29, 0.877);
+  animation: animeBorder 0.3s linear alternate-reverse infinite;
+}
+#music-toggle-button input:checked + .button .icon svg {
+  fill: rgb(0, 214, 29);
+  animation: animeFill 0.3s linear alternate-reverse infinite;
+  top: 1px;
+  left: -1px;
+}
+@keyframes animeBorder {
+  to {
+    border-color: rgba(0, 214, 29, 0.233);
+  }
+}
+/* @keyframes animeFill {
+  to {
+    fill: rgba(0, 214, 29, 0.233);
+  }
+} */

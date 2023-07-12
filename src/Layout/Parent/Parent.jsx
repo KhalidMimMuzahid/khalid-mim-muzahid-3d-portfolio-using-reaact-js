@@ -9,7 +9,7 @@ const Parent = () => {
   const playAudio = () => {
     if (audio?.play && !isPlayedWelcomeSound) {
       // audio?.play();
-
+      // Welcome! I'm       Khaaleed Meem Moozaheed,,an experienced full-stack developer and Leadership Development Manager. It's a pleasure to have you here. Thank you!
       isPlayedWelcomeSound = true;
       console.log("after");
     }
