@@ -5,8 +5,9 @@ import { ComputersCanvas } from "./canvas";
 import "./hero.css";
 import { useContext } from "react";
 import { UIContext } from "../contexts/UIProvider/UIProvider";
+import { playSound } from "../utils/playAudio";
 const Hero = () => {
-  const { theme } = useContext(UIContext);
+  const { theme, sound } = useContext(UIContext);
   return (
     <section className={`relative w-full h-screen mx-auto `}>
       <div
@@ -52,6 +53,9 @@ const Hero = () => {
                 ? "neon-button-dark-mode"
                 : "black-button-light-mode"
             }  `}
+            onClick={() => {
+              sound === "on" && playSound("resumeDownloaded");
+            }}
           >
             Resume
           </button>

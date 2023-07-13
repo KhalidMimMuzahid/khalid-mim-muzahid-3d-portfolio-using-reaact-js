@@ -29,14 +29,17 @@ export const navLinks = [
   {
     id: "about",
     title: "About",
+    audio: "aboutMe",
   },
   {
     id: "work",
     title: "Work",
+    audio: "myWork",
   },
   {
     id: "contact",
     title: "Contact",
+    audio: "contactMe",
   },
 ];
 

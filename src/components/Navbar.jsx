@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Hamburger from "hamburger-react";
 import "./navbar.css";
 import { UIContext } from "../contexts/UIProvider/UIProvider";
-import playSound from "../utils/playAudio";
+import { playMusic, playSound } from "../utils/playAudio";
 const Navbar = () => {
   const { theme, setTheme, sound, setSound, music, setMusic } =
     useContext(UIContext);
@@ -48,6 +48,7 @@ const Navbar = () => {
           className="flex items-center gap-2 "
           onClick={() => {
             setActive("");
+            sound === "on" && playSound("welcome");
             window.scrollTo(0, 0);
           }}
         >
@@ -81,7 +82,7 @@ const Navbar = () => {
                 onClick={() => {
                   setActive(nav.title);
 
-                  playSound("contactMe");
+                  sound === "on" && playSound(nav.audio);
                 }}
               >
                 <a
@@ -110,9 +111,11 @@ const Navbar = () => {
                     setSound((prev) => {
                       if (prev === "on") {
                         localStorage.setItem("sound", "off");
+                        playSound("soundOff");
                         return "off";
                       } else {
                         localStorage.setItem("sound", "on");
+                        playSound("soundOn");
                         return "on";
                       }
                     })
@@ -145,9 +148,13 @@ const Navbar = () => {
                     setMusic((prev) => {
                       if (prev === "on") {
                         localStorage.setItem("music", "off");
+                        playMusic("pause");
+                        sound === "on" && playSound("musicOff");
                         return "off";
                       } else {
                         localStorage.setItem("music", "on");
+                        sound === "on" && playSound("musicOn");
+                        playMusic("play");
                         return "on";
                       }
                     })
@@ -185,9 +192,11 @@ const Navbar = () => {
                   setTheme((prev) => {
                     if (prev === "light") {
                       localStorage.setItem("theme", "dark");
+                      sound === "on" && playSound("darkThemeActivated");
                       return "dark";
                     } else {
                       localStorage.setItem("theme", "light");
+                      sound === "on" && playSound("darkThemeDeactivated");
                       return "light";
                     }
                   })
@@ -365,6 +374,7 @@ const Navbar = () => {
                           onClick={() => {
                             setToggle(!toggle);
                             setActive(nav.title);
+                            sound === "on" && playSound(nav.audio);
                           }}
                         >
                           <a href={`#${nav.id}`}>{nav.title}</a>
