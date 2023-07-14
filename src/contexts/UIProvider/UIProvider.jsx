@@ -7,6 +7,20 @@ const UIProvider = ({ children }) => {
   const [theme, setTheme] = useState("dark");
   const [sound, setSound] = useState("on");
   const [music, setMusic] = useState("on");
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    // console.log("screen size: ", screenSize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
   useEffect(() => {
     const newTheme = localStorage.getItem("theme");
     if (newTheme) {
@@ -26,7 +40,15 @@ const UIProvider = ({ children }) => {
     }
   }, []);
 
-  const info = { theme, setTheme, sound, setSound, music, setMusic };
+  const info = {
+    theme,
+    setTheme,
+    sound,
+    setSound,
+    music,
+    setMusic,
+    screenWidth,
+  };
   return <UIContext.Provider value={info}>{children}</UIContext.Provider>;
 };
 

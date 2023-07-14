@@ -1,0 +1,24 @@
+#contact-form input {
+  border: 1px solid #ffffff40;
+}
+
+#contact-form input:hover {
+  border: 1px solid #2243fa;
+  box-shadow: 2px 2px 2px 1px #2242fa73;
+}
+#contact-form input:focus {
+  border: 1px solid #2243fa;
+  box-shadow: 2px 2px 2px 1px #2242fa73;
+}
+#contact-form textarea {
+  border: 1px solid #ffffff40;
+}
+
+#contact-form textarea:hover {
+  border: 1px solid #2243fa;
+  box-shadow: 2px 2px 2px 1px #2242fa73;
+}
+#contact-form textarea:focus {
+  border: 1px solid #2243fa;
+  box-shadow: 2px 2px 2px 1px #2242fa73;
+}

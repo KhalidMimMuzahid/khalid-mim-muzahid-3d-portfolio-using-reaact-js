@@ -7,6 +7,7 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { fadeIn, textVariant } from "../utils/motion";
+import "./contact.css";
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -79,6 +80,7 @@ const Contact = () => {
             ref={formRef}
             onSubmit={handleSubmit}
             className="mt-4 flex flex-col gap-8"
+            id="contact-form"
           >
             <label className="flex flex-col">
               <span className="text-white font-medium mb-2">Your Name</span>
@@ -88,7 +90,7 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="What's your good name?"
-                className="bg-primary py-2 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                className="bg-primary py-2 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
               />
             </label>
             <label className="flex flex-col">
@@ -99,7 +101,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="What's your web address?"
-                className="bg-primary py-2 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                className="bg-primary py-2 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
               />
             </label>
             <label className="flex flex-col">
@@ -116,7 +118,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="bg-primary py-2 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+              className="bg-primary py-2 px-8 rounded-xl outline-none border border-[#ffffff40] hover:border-[#2243fa] w-fit text-white font-bold shadow-md shadow-primary"
             >
               {loading ? "Sending..." : "Send"}
             </button>

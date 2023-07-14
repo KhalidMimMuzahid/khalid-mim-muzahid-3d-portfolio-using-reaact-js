@@ -76,7 +76,7 @@ const musics = [
 ];
 let audio;
 
-let musicNo = Number(localStorage.getItem("musicNo").toString()) || 1;
+let musicNo = Number(localStorage.getItem("musicNo")) || 1;
 // console.log("musicNo: ", musicNo);
 let musicObj = musics.find((each) => musicNo === each.musicNo);
 // console.log("musicObj: ", musicObj);
