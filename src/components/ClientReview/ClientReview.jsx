@@ -79,7 +79,7 @@ function ClientReview() {
             <h2 className={`${styles.sectionHeadText}`}>Reviews.</h2>
           </motion.div>
           <div className=" hidden lg:block ">
-            <div className="flex  justify-between">
+            <div className="flex  justify-between ">
               {data.map((item, index) => (
                 <EachReview
                   item={item}

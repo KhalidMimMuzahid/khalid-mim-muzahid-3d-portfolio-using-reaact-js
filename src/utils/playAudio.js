@@ -79,7 +79,7 @@ let audio;
 let musicNo = Number(localStorage.getItem("musicNo").toString()) || 1;
 // console.log("musicNo: ", musicNo);
 let musicObj = musics.find((each) => musicNo === each.musicNo);
-console.log("musicObj: ", musicObj);
+// console.log("musicObj: ", musicObj);
 let music;
 let isPlaying = false;
 music = new Audio(musicObj?.music);
@@ -100,7 +100,7 @@ const playMusic = (actionType) => {
     // console.log("musicNo: ", musicNo);
     // const musicObjTmp = musics.find((each) => musicNo === each.musicNo);
 
-    console.log("music?.play): ", music?.play);
+    // console.log("music?.play): ", music?.play);
     if (music?.play && !isPlaying) {
       music.currentTime = 0;
       music?.play();
@@ -109,31 +109,31 @@ const playMusic = (actionType) => {
     }
   } else if (actionType === "play") {
     // console.log("musicNo: ", musicNo);
-    console.log("music?.pause: ", music?.pause);
-    // if (music?.pause && isPlaying) {
-    //   music?.pause();
-    //   isPlaying = false;
-    //   // music = null;
-    // }
+    // console.log("music?.pause: ", music?.pause);
+    if (music?.pause && isPlaying) {
+      music?.pause();
+      isPlaying = false;
+      // music = null;
+    }
     music = null;
     musicNo = musicNo === musics?.length ? 1 : musicNo + 1;
     localStorage.setItem("musicNo", musicNo);
     const musicObjTmp = musics.find((each) => musicNo === each?.musicNo);
     music = new Audio(musicObjTmp?.music);
-    console.log("musicNo:", musicNo);
-    console.log("musicObjTmp: ", musicObjTmp);
+    // console.log("musicNo:", musicNo);
+    // console.log("musicObjTmp: ", musicObjTmp);
     music.loop = true; // Set loop property to true
     music.volume = 0.1; // Set the volume (between 0.0 and 1.0)
     if (music?.play && !isPlaying) {
       music.currentTime = 0;
       music?.play();
       isPlaying = true;
-      console.log(musicObjTmp?.music);
+      // console.log(musicObjTmp?.music);
     }
-    console.log("musicNo after: ", musicNo);
+    // console.log("musicNo after: ", musicNo);
   } else if (actionType === "pause") {
     // console.log("xxxxxxxxxxxxxxxxxxxx");
-    console.log("music?.pause: ", music?.pause);
+    // console.log("music?.pause: ", music?.pause);
     if (music?.pause && isPlaying) {
       music?.pause();
       isPlaying = false;
