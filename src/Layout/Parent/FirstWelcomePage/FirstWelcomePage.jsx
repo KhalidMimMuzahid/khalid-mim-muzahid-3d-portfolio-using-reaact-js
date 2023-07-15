@@ -1,6 +1,7 @@
 import React from "react";
+import { playMusic } from "../../../utils/playAudio";
 
-const FirstWelcomePage = ({ setJustCome }) => {
+const FirstWelcomePage = ({ setJustCome, music }) => {
   let audio = new Audio("/src/assets/audio/sounds/welcome.mp3");
   return (
     <div>

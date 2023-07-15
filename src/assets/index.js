@@ -10,6 +10,7 @@ import close from "./close.svg";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import profilePhoto from "./KhalidMimMuzahid.jpg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -60,4 +61,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  profilePhoto,
 };

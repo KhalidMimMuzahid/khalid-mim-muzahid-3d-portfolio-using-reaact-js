@@ -29,7 +29,7 @@ const Parent = () => {
       </div>
 
       <div style={{ display: justCome ? "block" : "none" }}>
-        <FirstWelcomePage setJustCome={setJustCome} />
+        <FirstWelcomePage setJustCome={setJustCome} music={music} />
       </div>
     </div>
   );

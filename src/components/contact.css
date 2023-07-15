@@ -22,3 +22,12 @@
   border: 1px solid #2243fa;
   box-shadow: 2px 2px 2px 1px #2242fa73;
 }
+
+#contact-form button {
+  border: 1px solid #ffffff40;
+}
+
+#contact-form button:hover {
+  border: 1px solid #2243fa;
+  box-shadow: 2px 2px 2px 1px #2242fa73;
+}

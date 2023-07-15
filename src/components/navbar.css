@@ -278,7 +278,7 @@ label:after {
 #sound-toggle-button .button .icon svg {
   height: 100%;
   width: 100%;
-  fill: #ff3b3bcc;
+  fill: #ff0202;
   position: relative;
   top: 4px;
   left: 2px;
@@ -286,11 +286,11 @@ label:after {
 
 #sound-toggle-button input:checked + .button {
   box-shadow: inset -1px -1px 0 #5e5e5e, inset 1px 1px 0 #1c1c1c;
-  border: 2px solid rgba(0, 214, 29, 0.877);
+  border: 2px solid rgb(0, 255, 34);
   animation: animeBorder 0.3s linear alternate-reverse infinite;
 }
 #sound-toggle-button input:checked + .button .icon svg {
-  fill: rgb(0, 214, 29);
+  fill: rgb(0, 255, 34);
   animation: animeFill 0.3s linear alternate-reverse infinite;
 }
 @keyframes animeBorder {
@@ -350,7 +350,7 @@ label:after {
 #music-toggle-button .button .icon svg {
   height: 100%;
   width: 100%;
-  fill: #ff3b3bcc;
+  fill: #ff0202;
   position: relative;
   top: 1px;
   left: 1px;
@@ -358,11 +358,11 @@ label:after {
 
 #music-toggle-button input:checked + .button {
   box-shadow: inset -1px -1px 0 #5e5e5e, inset 1px 1px 0 #1c1c1c;
-  border: 2px solid rgba(0, 214, 29, 0.877);
+  border: 2px solid rgb(0, 255, 34);
   animation: animeBorder 0.3s linear alternate-reverse infinite;
 }
 #music-toggle-button input:checked + .button .icon svg {
-  fill: rgb(0, 214, 29);
+  fill: rgb(0, 255, 34);
   animation: animeFill 0.3s linear alternate-reverse infinite;
   top: 1px;
   left: -1px;

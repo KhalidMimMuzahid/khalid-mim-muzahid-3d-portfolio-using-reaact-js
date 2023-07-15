@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -7,6 +7,7 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { UIContext } from "../contexts/UIProvider/UIProvider";
 
 const ProjectCard = ({
   index,
@@ -19,7 +20,7 @@ const ProjectCard = ({
   <Tilt className="xs:w-[340px] w-full">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full  p-[1px] rounded-[20px] shadow-card"
+      className="w-full  p-[1px] rounded-[20px] shadow-card hover:cursor-grab"
     >
       <div
         options={{
@@ -41,6 +42,8 @@ const ProjectCard = ({
   </Tilt>
 );
 const Works = () => {
+  const { screenWidth } = useContext(UIContext);
+  const [projectDetails, setProjectDetails] = useState({});
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -66,6 +69,37 @@ const Works = () => {
           <ProjectCard key={`${index}`} index={index} {...project} />
         ))}
       </div>
+      {/* Open the modal using ID.showModal() method */}
+      <button
+        className="btn"
+        onClick={() => window.projectDetailsModal.showModal()}
+      >
+        open modal
+      </button>
+      <dialog
+        id="projectDetailsModal"
+        className="modal modal-bottom md:modal-middle border-8 border-red-700 md:p-10"
+      >
+        <form
+          style={{
+            width: screenWidth >= 768 && `${screenWidth - 100}px`,
+            maxWidth: screenWidth >= 768 && "900px",
+          }}
+          method="dialog"
+          className="modal-box border-4 border-gray-700 h-full md:max-h-[700px] "
+        >
+          <div className=" border-4 h-full ">
+            {/* if there is a button in form, it will close the modal */}
+            <div className="w-full border border-lack flex justify-end relative top-[-20px] left-[20px]">
+              <button className="text-red-700 ">✖</button>
+            </div>
+            <div className="border-4 relative top-[-26px] h-full">
+              {/* workplace */}
+              conetext should be there
+            </div>
+          </div>
+        </form>
+      </dialog>
     </>
   );
 };
