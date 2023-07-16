@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import EachCarouselSection from "./EachCarouselSection/EachCarouselSection";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
@@ -6,7 +6,6 @@ import { useEffect } from "react";
 function Carousel({ data }) {
   const [index, setIndex] = useState(0);
   const [stop, setStop] = useState(false);
-
   useEffect(() => {
     const interval = setInterval(() => {
       !stop && setIndex((prev) => (prev >= 3 ? 0 : prev + 1));
@@ -22,16 +21,17 @@ function Carousel({ data }) {
       <div className="w-full mt-5">
         <div className="mx-auto flex flex-col justify-center">
           <div
-            className="w-[90dvw] overflow-hidden"
+            // overflow-hidden
+            className="w-full overflow-hidden"
             onMouseEnter={() => setStop(true)}
             onMouseLeave={() => setStop(false)}
           >
             <motion.div
               animate={{ x: `-${index * 100}%` }}
-              className="flex items-center"
+              className="flex items-center gap-2"
             >
               {data.map((item, indexHere) => (
-                <div id={item?.id} className="" key={indexHere}>
+                <div id={item?.id} className=" w-full" key={indexHere}>
                   <EachCarouselSection item={item} />
                 </div>
               ))}
@@ -41,8 +41,8 @@ function Carousel({ data }) {
         <div className="my-5 flex gap-7 justify-center">
           {data.map((item, indexHere) => (
             <div
-              className={`h-[10px] w-[10px] ${
-                index === indexHere ? "bg-[#4BA25D]" : "bg-[#a0ffb3]"
+              className={`h-[10px] hover:cursor-grab w-[10px] ${
+                index === indexHere ? "bg-[#2243fa]" : "bg-[#2242fa65]"
               } rounded-full`}
               key={indexHere}
               onClick={() => setIndex(indexHere)}

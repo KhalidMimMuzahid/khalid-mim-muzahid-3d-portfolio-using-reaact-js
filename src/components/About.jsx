@@ -19,7 +19,7 @@ const ServiceCard = ({ index, title, icon }) => (
           scale: 1,
           speed: 450,
         }}
-        className="bg-gradient-to-r from-primary  to-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+        className="bg-gradient-to-r from-tertiary-lite dark:from-primary to-secondary-lite  dark:to-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
       >
         <img
           src={icon}
@@ -45,7 +45,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px]  leading-[30px]e w-full text-justify"
+        className="mt-4 text-quaternary-lite dark:text-secondary  text-[17px]  leading-[30px]e w-full text-justify"
       >
         Hello, I'm Khalid Mim Muzahid, a passionate and self-motivated Leader in
         Developer Relations and a Master in Stack Development. Programming is my

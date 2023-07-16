@@ -1,0 +1,16 @@
+#project-details button {
+  border: 1px solid #ffffff40;
+}
+
+#project-details button:hover {
+  border: 1px solid #2243fa;
+  box-shadow: 2px 2px 2px 1px #2242fa73;
+}
+#project-details-anchor a {
+  border: 1px solid #ffffff40;
+}
+
+#project-details-anchor a:hover {
+  border: 1px solid #2243fa;
+  box-shadow: 2px 2px 2px 1px #2242fa73;
+}

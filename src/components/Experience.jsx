@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -11,17 +11,20 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import { UIContext } from "../contexts/UIProvider/UIProvider";
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience, theme }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
+        background: theme === "dark" ? "#1d1836" : "#282b2e",
+        color: theme === "dark" ? "#fff" : "#1E2022",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{
+        borderRight: `7px solid  ${theme === "dark" ? "#282b2e" : ""}`,
+      }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
+      iconStyle={{ background: experience.iconBg, color: "#000" }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
           <img
@@ -31,6 +34,7 @@ const ExperienceCard = ({ experience }) => {
           />
         </div>
       }
+      iconClassName={""}
     >
       <div>
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
@@ -57,6 +61,7 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const { theme } = useContext(UIContext);
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -69,11 +74,14 @@ const Experience = () => {
       </motion.div>
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+        <VerticalTimeline
+        // lineColor={theme === "dark" ? "#fff" : "#000"}
+        >
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
+              theme={theme}
             />
           ))}
         </VerticalTimeline>

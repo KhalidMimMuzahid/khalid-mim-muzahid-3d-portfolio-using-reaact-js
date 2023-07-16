@@ -1,8 +1,9 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useContext } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+import { UIContext } from "../../contexts/UIProvider/UIProvider";
 
 const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf");
@@ -13,7 +14,8 @@ const Earth = () => {
 };
 
 const EarthCanvas = () => {
-  return (
+  const { screenWidth } = useContext(UIContext);
+  return screenWidth < 1024 ? null : (
     <Canvas
       shadows
       frameloop="demand"

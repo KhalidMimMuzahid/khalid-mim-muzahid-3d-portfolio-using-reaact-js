@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -8,6 +8,7 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import "./contact.css";
+import { UIContext } from "../contexts/UIProvider/UIProvider";
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -15,7 +16,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
+  const { screenWidth } = useContext(UIContext);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -71,10 +72,16 @@ const Contact = () => {
         <p className={`${styles.sectionSubText} `}>Get in touch</p>
         <h2 className={`${styles.sectionHeadText}`}>Contact..</h2>
       </motion.div>
-      <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10  `}>
+      <div
+        style={{
+          height: screenWidth < 1024 && "560px",
+          // overflow: screenWidth < 1024 && "hidden",
+        }}
+        className={`xl:mt-12  flex lg:flex-row flex-col gap-10`}
+      >
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[0.75]  bg-gradient-to-r from-primary to-tertiary  border-2 border-black shadow-card p-8 rounded-2xl"
+          className=" grow  bg-gradient-to-r from-primary to-tertiary  border-2 border-black shadow-card p-8 rounded-2xl"
         >
           <form
             ref={formRef}
@@ -127,7 +134,7 @@ const Contact = () => {
 
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+          className="w-[350px] lg:grow"
         >
           <EarthCanvas />
         </motion.div>
