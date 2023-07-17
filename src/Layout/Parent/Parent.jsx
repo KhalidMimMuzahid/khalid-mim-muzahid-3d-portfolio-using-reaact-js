@@ -12,7 +12,7 @@ const Parent = () => {
   const [justCome, setJustCome] = useState(true);
 
   return (
-    <div className={theme}>
+    <div className={`${theme} overflow-hidden `}>
       <div
         className="max-w-[1440px] mx-auto "
         style={{ display: justCome ? "none" : "block" }}

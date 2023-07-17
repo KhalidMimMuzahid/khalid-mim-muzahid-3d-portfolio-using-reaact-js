@@ -6,14 +6,16 @@
   position: relative;
   list-style: none;
   width: 120px;
-  background: #3e3f46;
+  /* background: rgb(61, 62, 69); */
+  background: #2243fa;
   padding: 15px;
   /* z-index: var(--i); */
   transition: 0.5s;
 }
 
 #sidenavbarformobile ul li:hover {
-  background: #33a3ee;
+  /* background: #33a3ee; */
+
   transform: translateX(-50px);
 }
 #sidenavbarformobile ul li::before {
@@ -23,13 +25,14 @@
   left: -40px;
   width: 40px;
   height: 100%;
-  background: #2e3133;
+  /* background: rgb(46, 49, 51); */
+  background: #152999;
   transform-origin: right;
   transform: skewY(45deg);
   transition: 0.5s;
 }
 #sidenavbarformobile ul li:hover::before {
-  background: #1f5378;
+  background: #152999;
 }
 #sidenavbarformobile ul li:after {
   content: "";
@@ -38,13 +41,13 @@
   left: 0;
   width: 100%;
   height: 40px;
-  background: #35383e;
+  background: #3250f6;
   transform-origin: bottom;
   transform: skewX(45deg);
   transition: 0.5s;
 }
 #sidenavbarformobile ul li:hover::after {
-  background: #2982b9;
+  background: #2243fa;
 }
 #sidenavbarformobile ul li a {
   text-decoration: none;
@@ -58,6 +61,69 @@
   color: #fff;
 }
 #sidenavbarformobile ul li:last-child::after {
+  box-shadow: -120px 120px 20px #2242fa6c;
+}
+
+#sidenavbarformobile-light-mode ul {
+  position: relative;
+  transform: skewY(-15deg);
+}
+#sidenavbarformobile-light-mode ul li {
+  position: relative;
+  list-style: none;
+  width: 120px;
+  background: #232327;
+  padding: 15px;
+  /* z-index: var(--i); */
+  transition: 0.5s;
+}
+
+#sidenavbarformobile-light-mode ul li:hover {
+  background: #232327;
+  transform: translateX(-50px);
+}
+#sidenavbarformobile-light-mode ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background: #17191a;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
+#sidenavbarformobile-light-mode ul li:hover::before {
+  background: #17191a;
+}
+#sidenavbarformobile-light-mode ul li:after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #1c1e21;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.5s;
+}
+#sidenavbarformobile-light-mode ul li:hover::after {
+  background: #1c1e21;
+}
+#sidenavbarformobile-light-mode ul li a {
+  text-decoration: none;
+  /* color: #999; */
+  display: block;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+#sidenavbarformobile-light-mode ul li:hover a {
+  color: #fff;
+}
+#sidenavbarformobile-light-mode ul li:last-child::after {
   box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
 }
 

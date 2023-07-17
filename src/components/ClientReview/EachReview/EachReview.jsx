@@ -20,7 +20,9 @@ function EachReview({ item, index, active, setActive, setShouldUpdate }) {
       }}
       className={`${style.triangle_gradient} relative grow pt-5 px-5 ${
         index === active ? "w-[400px] xl:w-[500px]" : "w-[240px] xl:w-[400px]"
-      } h-[500px]  duration-300 overflow-hidden bg-gradient-to-r from-primary to-tertiary border-2 shadow-card  border-primary dark:border-black hover:cursor-grab`}
+      } h-[500px]  duration-300 overflow-hidden  border-2 shadow-card  border-white dark:border-black hover:cursor-grab
+      bg-gradient-to-r from-tertiary-lite dark:from-primary to-secondary-lite  dark:to-tertiary 
+      `}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={() => setShouldUpdate(true)}
     >

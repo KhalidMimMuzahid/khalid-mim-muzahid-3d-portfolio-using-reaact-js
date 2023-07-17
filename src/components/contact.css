@@ -31,3 +31,40 @@
   border: 1px solid #2243fa;
   box-shadow: 2px 2px 2px 1px #2242fa73;
 }
+
+#contact-form-light-mode input {
+  border: 1px solid #ffffff;
+  box-shadow: 2px 2px 2px 1px #00000099;
+}
+
+#contact-form-light-mode input:hover {
+  border: 1px solid #d88e26;
+  box-shadow: 2px 2px 2px 1px #d88e26a3;
+}
+#contact-form-light-mode input:focus {
+  border: 1px solid #d88e26;
+  box-shadow: 2px 2px 2px 1px #d88e26a3;
+}
+#contact-form-light-mode textarea {
+  border: 1px solid #ffffff;
+  box-shadow: 2px 2px 2px 1px #00000099;
+}
+
+#contact-form-light-mode textarea:hover {
+  border: 1px solid #d88e26;
+  box-shadow: 2px 2px 2px 1px #d88e26a3;
+}
+#contact-form-light-mode textarea:focus {
+  border: 1px solid #d88e26;
+  box-shadow: 2px 2px 2px 1px #d88e26a3;
+}
+
+#contact-form-light-mode button {
+  border: 1px solid #ffffff;
+  box-shadow: 2px 2px 2px 1px #00000099;
+}
+
+#contact-form-light-mode button:hover {
+  border: 1px solid #d88e26;
+  box-shadow: 2px 2px 2px 1px #d88e26a3;
+}

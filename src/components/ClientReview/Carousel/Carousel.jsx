@@ -41,8 +41,10 @@ function Carousel({ data }) {
         <div className="my-5 flex gap-7 justify-center">
           {data.map((item, indexHere) => (
             <div
-              className={`h-[10px] hover:cursor-grab w-[10px] ${
-                index === indexHere ? "bg-[#2243fa]" : "bg-[#2242fa65]"
+              className={`h-[20px] hover:cursor-pointer w-[20px] ${
+                index === indexHere
+                  ? "bg-black dark:bg-[#2243fa]"
+                  : "bg-[#00000066] dark:bg-[#2242fa66]"
               } rounded-full`}
               key={indexHere}
               onClick={() => setIndex(indexHere)}

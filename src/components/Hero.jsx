@@ -9,7 +9,7 @@ import { playSound } from "../utils/playAudio";
 const Hero = () => {
   const { theme, sound } = useContext(UIContext);
   return (
-    <section className={`relative w-full h-screen mx-auto `}>
+    <section className={`relative w-full h-screen mx-auto hover:cursor-grab `}>
       <div
         className={`absolute inset-0 top-[80px]  mx-auto ${styles.paddingX} flex flex-row items-start gap-5 `}
       >

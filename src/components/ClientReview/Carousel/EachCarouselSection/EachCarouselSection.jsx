@@ -13,7 +13,9 @@ function EachCarouselSection({ item }) {
             ? `${screenWidth - 72}px`
             : `${screenWidth - 152}px`,
       }}
-      className={`rounded-xl  p-8  overflow-hidden bg-gradient-to-r from-[#040712] to-tertiary border-4   border-primary dark:border-black `}
+      className={`rounded-xl  p-8  overflow-hidden    border-4   border-white dark:border-black 
+      bg-gradient-to-r from-tertiary-lite dark:from-[#040712] to-secondary-lite  dark:to-tertiary 
+      `}
     >
       <div className={`${style.triangle_gradient} relative`}>
         <div>

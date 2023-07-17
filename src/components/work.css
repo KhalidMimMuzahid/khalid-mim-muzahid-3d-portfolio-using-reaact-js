@@ -1,10 +1,20 @@
 #project-details button {
   border: 1px solid #ffffff40;
+  box-shadow: 2px 2px 2px 1px #00000099;
 }
 
 #project-details button:hover {
   border: 1px solid #2243fa;
   box-shadow: 2px 2px 2px 1px #2242fa73;
+}
+#project-details-light-mode button {
+  border: 1px solid #ffffff;
+  box-shadow: 2px 2px 2px 1px #00000099;
+}
+
+#project-details-light-mode button:hover {
+  border: 1px solid #d88e26;
+  box-shadow: 2px 2px 2px 1px #d88e26a3;
 }
 #project-details-anchor a {
   border: 1px solid #ffffff40;
@@ -13,4 +23,13 @@
 #project-details-anchor a:hover {
   border: 1px solid #2243fa;
   box-shadow: 2px 2px 2px 1px #2242fa73;
+}
+#project-details-anchor-light-mode a {
+  border: 1px solid #ffffff;
+  box-shadow: 2px 2px 2px 1px #00000099;
+}
+
+#project-details-anchor-light-mode a:hover {
+  border: 1px solid #d88e26;
+  box-shadow: 2px 2px 2px 1px #d88e26a3;
 }

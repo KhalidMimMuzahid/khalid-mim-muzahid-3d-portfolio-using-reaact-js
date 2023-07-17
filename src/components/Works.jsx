@@ -8,7 +8,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { UIContext } from "../contexts/UIProvider/UIProvider";
 import ModalForProjectDetails from "./ModalForProjectDetails";
 import "./work.css";
-const ProjectCard = ({ index, project, setProjectDetails }) => {
+const ProjectCard = ({ index, project, setProjectDetails, theme }) => {
   const { projectName, thumbNail, introduction } = project;
   let intro = introduction;
   if (introduction.length > 100) {
@@ -30,7 +30,7 @@ const ProjectCard = ({ index, project, setProjectDetails }) => {
           className="bg-gradient-to-r from-tertiary-lite dark:from-primary to-secondary-lite  dark:to-tertiary overflow-hidden  rounded-[20px]  min-h-[280px]"
         >
           <div className="w-full ">
-            <img className="w-full" src={thumbNail} alt="" srcset="" />
+            <img className="w-full" src={thumbNail} alt="" srcSet="" />
           </div>
           <div className="p-4">
             <h3 className="text-white-100 text-[16px] font-bold ">
@@ -40,7 +40,14 @@ const ProjectCard = ({ index, project, setProjectDetails }) => {
               {intro}
             </p>
           </div>
-          <div className="card-actions justify-end m-4" id="project-details">
+          <div
+            className="card-actions justify-end m-4"
+            id={
+              theme === "dark"
+                ? "project-details"
+                : "project-details-light-mode"
+            }
+          >
             {/* Open the modal using ID.showModal() method */}
             <button
               onClick={() => {
@@ -59,7 +66,7 @@ const ProjectCard = ({ index, project, setProjectDetails }) => {
   );
 };
 const Works = () => {
-  const { screenWidth } = useContext(UIContext);
+  const { screenWidth, theme } = useContext(UIContext);
   const [projectDetails, setProjectDetails] = useState({});
   const [projects, setProjects] = useState([]);
   useEffect(() => {
@@ -97,6 +104,7 @@ const Works = () => {
             index={index}
             project={project}
             setProjectDetails={setProjectDetails}
+            theme={theme}
           />
         ))}
       </div>
@@ -106,6 +114,7 @@ const Works = () => {
         screenWidth={screenWidth}
         projectDetails={projectDetails}
         setProjectDetails={setProjectDetails}
+        theme={theme}
       />
     </>
   );

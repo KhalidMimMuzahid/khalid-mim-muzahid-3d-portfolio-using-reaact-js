@@ -4,6 +4,7 @@ const ModalForProjectDetails = ({
   screenWidth,
   projectDetails,
   setProjectDetails,
+  theme,
 }) => {
   const {
     projectName,
@@ -17,7 +18,7 @@ const ModalForProjectDetails = ({
     liveSite,
     _id,
   } = projectDetails;
-  console.log("projectDetails: ", projectDetails);
+  // console.log("projectDetails: ", projectDetails);
   return (
     <dialog
       id="projectDetailsModal"
@@ -30,7 +31,9 @@ const ModalForProjectDetails = ({
           height: "900px",
         }}
         method="dialog"
-        className="modal-box h-full    md:bg-gradient-to-r md:from-primary md:to-tertiary  md:border-4 md:border-black md:shadow-card"
+        className="modal-box h-full   dark:md:bg-gradient-to-r dark:md:from-primary dark:md:to-tertiary  md:border-4 dark:md:border-black dark:md:shadow-card
+        md:bg-gradient-to-r md:from-tertiary-lite md:to-secondary-lite md:border-white-100 md:shadow-card
+        "
       >
         <div className="  h-full">
           {/* if there is a button in form, it will close the modal */}
@@ -50,7 +53,7 @@ const ModalForProjectDetails = ({
                 <h1>is loading</h1>
               </div>
             ) : (
-              <div className="card    mx-auto  shadow-xl">
+              <div className="card md:pr-4   mx-auto  shadow-xl">
                 <figure>
                   <img src={thumbNail} alt="Shoes" />
                 </figure>
@@ -108,7 +111,11 @@ const ModalForProjectDetails = ({
                     ))}{" "}
                   </p>
                   <div
-                    id="project-details-anchor"
+                    id={
+                      theme === "dark"
+                        ? "project-details-anchor"
+                        : "project-details-anchor-light-mode"
+                    }
                     className="card-actions justify-end m-4"
                   >
                     <a
