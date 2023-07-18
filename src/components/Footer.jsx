@@ -38,7 +38,7 @@ const Footer = () => {
               {/* for linkedin  */}
               <div className="group bg-secondary hover:bg-white hover:shadow-xl p-[4px] rounded-full duration-200">
                 <Link
-                  to="https://www.facebook.com/people/Geeks-of-Gurukul/100090832062663/"
+                  to="https://www.linkedin.com/in/khalidmimmuzahid"
                   target="_blank"
                 >
                   <svg
@@ -66,10 +66,7 @@ const Footer = () => {
 
               {/* for github  */}
               <div className="group bg-secondary hover:bg-white hover:shadow-xl p-[4px] rounded-full duration-200">
-                <Link
-                  to="https://www.facebook.com/people/Geeks-of-Gurukul/100090832062663/"
-                  target="_blank"
-                >
+                <Link to="https://github.com/KhalidMimMuzahid" target="_blank">
                   <svg
                     fill="#000000"
                     viewBox="-2 -2 24 24"
@@ -84,7 +81,7 @@ const Footer = () => {
               {/* for whatsapp  */}
               <div className="group bg-secondary hover:bg-white hover:shadow-xl p-[4px] rounded-full duration-200">
                 <Link
-                  to="https://www.facebook.com/people/Geeks-of-Gurukul/100090832062663/"
+                  to="https://api.whatsapp.com/send?phone=8801716204599&text=Hi%20Khalid,%20Are%20you%20available%20now%20?"
                   target="_blank"
                 >
                   <svg
@@ -101,7 +98,7 @@ const Footer = () => {
               {/* for facebook  */}
               <div className="group bg-secondary hover:bg-white hover:shadow-xl p-[4px] rounded-full duration-200">
                 <Link
-                  to="https://www.facebook.com/people/Geeks-of-Gurukul/100090832062663/"
+                  to="https://www.facebook.com/khalid.mim.muzahid/"
                   target="_blank"
                 >
                   <svg
@@ -123,10 +120,7 @@ const Footer = () => {
               </div>
               {/* for twitter  */}
               <div className="group bg-secondary hover:bg-white hover:shadow-xl p-[4px] rounded-full duration-200">
-                <Link
-                  to="https://www.facebook.com/people/Geeks-of-Gurukul/100090832062663/"
-                  target="_blank"
-                >
+                <Link to="https://twitter.com/khalid_muzahid" target="_blank">
                   <svg
                     viewBox="0 0 960 960"
                     fill="none"
@@ -147,7 +141,7 @@ const Footer = () => {
               {/* for instagram  */}
               <div className="group bg-secondary hover:bg-white hover:shadow-xl p-[4px] rounded-full duration-200">
                 <Link
-                  to="https://www.facebook.com/people/Geeks-of-Gurukul/100090832062663/"
+                  to="https://www.instagram.com/khalid.mim.muzahid/"
                   target="_blank"
                 >
                   <svg

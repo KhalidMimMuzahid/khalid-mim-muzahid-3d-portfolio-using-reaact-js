@@ -73,6 +73,7 @@ const Works = () => {
     fetch("https://my-portfolio-snowy-zeta.vercel.app/projects")
       .then((res) => res.json())
       .then((data) => {
+        console.log("dataxxxxxxxxxxxxxxxxx:", data);
         setProjects(data);
       });
   }, []);

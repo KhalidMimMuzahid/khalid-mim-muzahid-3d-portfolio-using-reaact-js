@@ -6,44 +6,40 @@ import welcome from "../../../assets/lottie/welcome.json";
 
 const FirstWelcomePage = ({ setJustCome, music }) => {
   let audio = new Audio("/src/assets/audio/sounds/welcome.mp3");
-  console.log("cxxxxxxxxxxxxxxxxxxxx: ", music);
 
-  const play = () => {
-    console.log("gusti chudi");
-    if (music === "on") {
-      music === "on" && playMusic("playDefault");
-    }
-  };
-  const [activeLottie, setActiveLottie] = useState(
+  const [lottieName, setLottieName] = useState("welcome");
+  const welcomeLottie = (
     <Lottie
       style={{ height: "100vh" }}
       animationData={welcome}
       loop={false}
       onComplete={() => {
-        setActiveLottie(
-          <div
-            className="h-screen hover:cursor-grab"
-            onClick={() => {
-              setJustCome(false);
-
-              audio?.play();
-              music === "on" && play();
-            }}
-          >
-            <Lottie
-              style={{ height: "85%" }}
-              animationData={hiFi}
-              loop={true}
-            />
-            <h1 className="text-center relative top-[25px] text-xl text-[#000000b7]">
-              Click anywhere to start !
-            </h1>
-          </div>
-        );
+        setLottieName("hi-fi");
       }}
     />
   );
-  return <div className="">{activeLottie}</div>;
+  const hiFiveLottie = (
+    <div
+      className="h-screen hover:cursor-grab"
+      onClick={() => {
+        setJustCome(false);
+        // audio?.play();
+
+        // music === "on" && playMusic("playDefault");
+      }}
+    >
+      <Lottie style={{ height: "85%" }} animationData={hiFi} loop={true} />
+      <h1 className="text-center relative top-[25px] text-xl text-[#000000b7]">
+        Click anywhere to start !
+      </h1>
+    </div>
+  );
+
+  return (
+    <div className="">
+      {lottieName === "welcome" ? welcomeLottie : hiFiveLottie}
+    </div>
+  );
 };
 
 export default FirstWelcomePage;

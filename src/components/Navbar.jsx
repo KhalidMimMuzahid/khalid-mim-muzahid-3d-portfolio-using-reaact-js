@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logoDarkMode, logoLightMode, menu, close } from "../assets";
+import { logoDarkMode, logoLightMode } from "../assets";
 import { motion, AnimatePresence } from "framer-motion";
 import Hamburger from "hamburger-react";
 import "./navbar.css";
