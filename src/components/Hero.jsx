@@ -8,6 +8,31 @@ import { UIContext } from "../contexts/UIProvider/UIProvider";
 import { playSound } from "../utils/playAudio";
 const Hero = () => {
   const { theme, sound } = useContext(UIContext);
+  const downloadResume = () => {
+    const googleDriveLink =
+      "https://drive.google.com/file/d/1kzy_mYXAwu0neBwzVf4i-eeJYCoRF0PL/view?usp=sharing";
+
+    // Replace "YOUR_GOOGLE_DRIVE_LINK_HERE" with the actual link to your PDF file on Google Drive.
+
+    // Construct the direct link to the file using the Google Drive API.
+    const fileId = googleDriveLink.match(/\/([\w-]{33,})\//);
+    if (!fileId || !fileId[1]) {
+      console.error("Invalid Google Drive link");
+      return;
+    }
+
+    const directDownloadLink = `https://drive.google.com/uc?export=download&id=${fileId[1]}`;
+
+    // Start the download by creating a temporary anchor element.
+    const anchor = document.createElement("a");
+    anchor.href = directDownloadLink;
+    anchor.target = "_blank";
+    anchor.download = "file.pdf"; // Change the filename as desired.
+    anchor.click();
+    sound === "on" && playSound("resumeDownloaded");
+    // Clean up the temporary anchor element.
+    document.body.removeChild(anchor);
+  };
   return (
     <section className={`relative w-full h-screen mx-auto hover:cursor-grab `}>
       <div
@@ -53,9 +78,7 @@ const Hero = () => {
                 ? "neon-button-dark-mode"
                 : "black-button-light-mode"
             }  `}
-            onClick={() => {
-              sound === "on" && playSound("resumeDownloaded");
-            }}
+            onClick={downloadResume}
           >
             Resume
           </button>

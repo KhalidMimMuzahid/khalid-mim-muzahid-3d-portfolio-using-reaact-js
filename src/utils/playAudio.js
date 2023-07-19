@@ -8,6 +8,7 @@ import soundOff from "./../assets/audio/sounds/_sound off  (1).mp3";
 import soundOn from "./../assets/audio/sounds/_sound on  (1).mp3";
 import myWork from "./../assets/audio/sounds/_my work .mp3";
 import welcome from "./../assets/audio/sounds/_welcome .mp3";
+import welcomeDefault from "./../assets/audio/sounds/welcome.mp3";
 import darkThemeActivated from "./../assets/audio/sounds/dark theme activated.mp3";
 import darkThemeDeactivated from "./../assets/audio/sounds/dark theme deactivat.mp3";
 import resumeDownloaded from "./../assets/audio/sounds/resume downloaded.mp3";
@@ -33,6 +34,7 @@ const audios = {
   soundOn,
   myWork,
   welcome,
+  welcomeDefault,
   darkThemeActivated,
   darkThemeDeactivated,
   resumeDownloaded,

@@ -1,11 +1,10 @@
 import React, { useRef, useState } from "react";
-import { playMusic } from "../../../utils/playAudio";
+import { playMusic, playSound } from "../../../utils/playAudio";
 import Lottie from "lottie-react";
 import hiFi from "../../../assets/lottie/hi-fi.json";
 import welcome from "../../../assets/lottie/welcome.json";
 
 const FirstWelcomePage = ({ setJustCome, music, sound }) => {
-  let audio = new Audio("/src/assets/audio/sounds/welcome.mp3");
   const lottieRef = useRef();
   lottieRef?.current?.setSpeed(2);
   const [lottieName, setLottieName] = useState("welcome");
@@ -27,7 +26,7 @@ const FirstWelcomePage = ({ setJustCome, music, sound }) => {
       className="h-screen hover:cursor-grab"
       onClick={() => {
         setJustCome(false);
-        sound === "on" && audio?.play();
+        sound === "on" && playSound("welcomeDefault");
 
         music === "on" && playMusic("playDefault");
       }}
