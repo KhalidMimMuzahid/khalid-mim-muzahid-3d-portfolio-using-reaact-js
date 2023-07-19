@@ -9,6 +9,8 @@ import { slideIn } from "../utils/motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import "./contact.css";
 import { UIContext } from "../contexts/UIProvider/UIProvider";
+import { toast } from "react-toastify";
+import { playSound } from "../utils/playAudio";
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -16,7 +18,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const { screenWidth, theme } = useContext(UIContext);
+  const { screenWidth, theme, sound } = useContext(UIContext);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -32,24 +34,30 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
+    console.log("SERVICE_ID", import.meta.env.VITE_APP_EMAILJS_SERVICE_ID);
+    console.log("TEMPLATE_ID", import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID);
+    console.log("PUBLIC_KEY", import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY);
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Khalid Mim Muzahid",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "khalidmimm@gmail.com",
           message: form.message,
+          subject: "sent from your portfolio",
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          toast.success(
+            "Message sent successfully. I will get back to you as soon as possible. Thank You"
+          );
+          sound === "on" && playSound("messageSent");
 
           setForm({
             name: "",
@@ -59,9 +67,8 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
-          console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
+          toast.error("Ahh, something went wrong. Please try again.");
+          sound === "on" && playSound("somethingWrong");
         }
       );
   };
@@ -102,7 +109,7 @@ const Contact = () => {
               />
             </label>
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-2">Your email</span>
+              <span className="text-white  font-medium mb-2">Your email</span>
               <input
                 type="email"
                 name="email"
@@ -125,6 +132,7 @@ const Contact = () => {
             </label>
 
             <button
+              disabled={loading}
               type="submit"
               className="bg-secondary-lite dark:bg-primary py-2 px-8 rounded-xl outline-none  w-fit text-white font-bold shadow-md shadow-primary"
             >

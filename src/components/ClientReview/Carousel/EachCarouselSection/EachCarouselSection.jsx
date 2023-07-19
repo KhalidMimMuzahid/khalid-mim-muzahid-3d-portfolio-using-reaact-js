@@ -15,7 +15,7 @@ function EachCarouselSection({ item }) {
       }}
       className={`rounded-xl  p-8  overflow-hidden    border-4   border-white dark:border-black 
       bg-gradient-to-r from-tertiary-lite dark:from-[#040712] to-secondary-lite  dark:to-tertiary 
-      `}
+       hover:cursor-grab`}
     >
       <div className={`${style.triangle_gradient} relative`}>
         <div>
@@ -29,7 +29,7 @@ function EachCarouselSection({ item }) {
           <p className="text-sm text-[#2243fa] my-2 h-12 md:h-auto">
             {item?.position}
           </p>
-          <img src={item?.img} className="" />
+          <img src={item?.img} className="h-[40px]" />
         </div>
         <img
           src={item?.personImg}

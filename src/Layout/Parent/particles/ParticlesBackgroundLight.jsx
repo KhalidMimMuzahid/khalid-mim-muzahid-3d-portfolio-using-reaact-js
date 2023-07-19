@@ -35,13 +35,13 @@ const ParticlesBackgroundLight = () => {
         },
         particles: {
           number: {
-            value: 200,
+            value: 150,
             density: {
               enable: true,
             },
           },
           color: {
-            value: "#C9D6DF",
+            value: "#989fa3",
           },
           shape: {
             type: "polygon",
@@ -113,7 +113,7 @@ const ParticlesBackgroundLight = () => {
           },
         },
         background: {
-          color: "#F0F5F9",
+          color: "#ced3d6",
         },
       }}
     />

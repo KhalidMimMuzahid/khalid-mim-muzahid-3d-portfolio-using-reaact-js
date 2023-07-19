@@ -1,18 +1,22 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { playMusic } from "../../../utils/playAudio";
 import Lottie from "lottie-react";
 import hiFi from "../../../assets/lottie/hi-fi.json";
 import welcome from "../../../assets/lottie/welcome.json";
 
-const FirstWelcomePage = ({ setJustCome, music }) => {
+const FirstWelcomePage = ({ setJustCome, music, sound }) => {
   let audio = new Audio("/src/assets/audio/sounds/welcome.mp3");
-
+  const lottieRef = useRef();
+  lottieRef?.current?.setSpeed(2);
   const [lottieName, setLottieName] = useState("welcome");
+
   const welcomeLottie = (
     <Lottie
+      lottieRef={lottieRef}
       style={{ height: "100vh" }}
       animationData={welcome}
       loop={false}
+      speed={8}
       onComplete={() => {
         setLottieName("hi-fi");
       }}
@@ -23,9 +27,9 @@ const FirstWelcomePage = ({ setJustCome, music }) => {
       className="h-screen hover:cursor-grab"
       onClick={() => {
         setJustCome(false);
-        // audio?.play();
+        sound === "on" && audio?.play();
 
-        // music === "on" && playMusic("playDefault");
+        music === "on" && playMusic("playDefault");
       }}
     >
       <Lottie style={{ height: "85%" }} animationData={hiFi} loop={true} />

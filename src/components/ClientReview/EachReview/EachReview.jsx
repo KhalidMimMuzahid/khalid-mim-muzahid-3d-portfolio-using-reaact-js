@@ -1,7 +1,14 @@
 import React from "react";
 import style from "./eachReview.module.css";
 
-function EachReview({ item, index, active, setActive, setShouldUpdate }) {
+function EachReview({
+  item,
+  index,
+  active,
+  setActive,
+  setShouldUpdate,
+  length,
+}) {
   const handleMouseEnter = () => {
     if (index !== active) {
       setShouldUpdate(false);
@@ -15,8 +22,8 @@ function EachReview({ item, index, active, setActive, setShouldUpdate }) {
         // border-top-left-radius: 80px 80px;
         borderTopLeftRadius: index === 0 && "20px 20px",
         borderBottomLeftRadius: index === 0 && "20px 20px",
-        borderTopRightRadius: index === 3 && "20px 20px",
-        borderBottomRightRadius: index === 3 && "20px 20px",
+        borderTopRightRadius: index === length - 1 && "20px 20px",
+        borderBottomRightRadius: index === length - 1 && "20px 20px",
       }}
       className={`${style.triangle_gradient} relative grow pt-5 px-5 ${
         index === active ? "w-[400px] xl:w-[500px]" : "w-[240px] xl:w-[400px]"
@@ -42,13 +49,15 @@ function EachReview({ item, index, active, setActive, setShouldUpdate }) {
               {item?.description}
             </p>
             <div className="mt-10">
-              <p className="text-[#915EFF] font-semibold text-lg">
+              <p className="text-[#2242fa] font-semibold text-lg">
                 {item?.name}
               </p>
-              <p className="text-[#915EFF] font-medium my-3">
+              <p className="text-[#2242fa] font-medium my-3">
                 {item?.position}
               </p>
-              {item?.img && <img src={item.img} alt={item?.heading} />}
+              {item?.img && (
+                <img className="h-[50px]" src={item.img} alt={item?.heading} />
+              )}
             </div>
           </>
         )}

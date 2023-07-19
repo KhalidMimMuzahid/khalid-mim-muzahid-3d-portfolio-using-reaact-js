@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import EachReview from "./EachReview/EachReview";
-import hpLogo from "../../assets/StudentReview/hpLogo.png";
-import ibmLogo from "../../assets/StudentReview/ibmLogo.png";
-import tcsLogo from "../../assets/StudentReview/tcsLogo.png";
+
+import gog from "../../assets/StudentReview/gog.png";
+import city from "../../assets/StudentReview/city_university.png";
+import pHero from "../../assets/StudentReview/programming-hero.png";
 import swiggyLogo from "../../assets/StudentReview/swiggyLogo.png";
-import person1 from "../../assets/StudentReview/person1.png";
-import person2 from "../../assets/StudentReview/person2.png";
-import person3 from "../../assets/StudentReview/person3.png";
+
+import habib from "../../assets/StudentReview/abdullah al habib.png";
+import ajay from "../../assets/StudentReview/ajay_katana.png";
+import rakib from "../../assets/StudentReview/rakib_uddin.png";
 import person4 from "../../assets/StudentReview/person4.png";
+
 import Carousel from "./Carousel/Carousel";
 import { SectionWrapper } from "../../hoc";
 import { styles } from "./../../styles";
@@ -16,44 +19,43 @@ import { fadeIn, textVariant } from "../../utils/motion";
 const data = [
   {
     id: 1,
-    heading: "Non CS Student to Top Company",
-    description:
-      "My experience with Geeks of Gurukul was wonderful. The courses strengthened my concepts and helped me in my interviews. The faculty was amazing. I would definitely recommend Geeks of Gurukul.",
-    name: "Kavitha Sharma",
-    position: "Full Stack development",
-    img: hpLogo,
-    personImg: person1,
+    heading: "Done his best in the final year project",
+    description: `Khalid's dedication, technical proficiency, and problem-solving abilities were instrumental in the project's success. He played a key role in developing user-friendly functionalities for medicine donation, reselling, and QR/barcode scanning.
+    Moreover, Khalid's teamwork, communication, and professionalism were exemplary, making him an invaluable asset to any team or organization.`,
+    name: "Md. Rakib Uddin",
+    position: "Assistant Professor ",
+    img: city,
+    personImg: rakib,
   },
   {
     id: 2,
-    heading: "Non Engineer to Investment Bank",
-    description:
-      "Geeks of Gurukul is one of the best learning platforms. I enrolled into C++ Foundation with Data Structures. The course content was very informative and well structured. The way Ankush Sir and Nidhi Ma'am explain a topic is commendable. My approach towards solving a problem completely changed.",
-    name: "Abishek kumar",
+    heading: "Ready to Excel in Your Team",
+    description: `Khalid's result-oriented approach, clear vision, and deep understanding of project requirements ensured seamless collaboration and on-time project delivery. He consistently developed robust web applications with cutting-edge UI/UX designs that exceeded client expectations.
+      His leadership skills fostered a productive team environment, promoting open communication and innovative thinking. Khalid's technical expertise and mentorship empowered team members to excel and deliver outstanding results.`,
+    name: "Katana Sri Ajay",
     position: "Analyst",
-    img: ibmLogo,
-    personImg: person2,
+    img: gog,
+    personImg: ajay,
   },
   {
     id: 3,
-    heading: "College dropout to a package of 10 LPA",
-    description:
-      "The experience and knowledge I learned at Geeks of Gurukul greatly sharpened my skills and allowed me to pass the HackerRank and technical interview rounds. The placement team coordinated everything perfectly and it was unbelievable to get an offer letter of 10 LPA. Grateful to Geeks of Gurukul.",
-    name: "Ishani Sharma",
-    position: "Developer",
-    img: tcsLogo,
-    personImg: person3,
+    heading: "Empowering Innovation and Collaboration",
+    description: `I highly recommend Khalid Mim Muzahid for the Leadership Development Manager role. He demonstrated exceptional skills in web application development, effective planning, and efficient collaboration as part of the Job Junction - Group Project at Programming Hero. His proactive approach and technical expertise will undoubtedly be a valuable addition to your team.`,
+    name: "Abdullah Al Habib",
+    position: "ob Placement Executive",
+    img: pHero,
+    personImg: habib,
   },
-  {
-    id: 4,
-    heading: "Tier-3 college to 6 stars on CodeChef",
-    description:
-      "It has been a crazy ride from being a novice CS student to a 6 star Coder and ICPC Regionalist. I would like to thank Geeks of Gurukul for helping a Tier-3 college student explore such opportunities.",
-    name: "Arpitha",
-    position: "Data Science",
-    img: swiggyLogo,
-    personImg: person4,
-  },
+  // {
+  //   id: 4,
+  //   heading: "Tier-3 college to 6 stars on CodeChef",
+  //   description:
+  //     "It has been a crazy ride from being a novice CS student to a 6 star Coder and ICPC Regionalist. I would like to thank Geeks of Gurukul for helping a Tier-3 college student explore such opportunities.",
+  //   name: "Arpitha",
+  //   position: "Data Science",
+  //   img: swiggyLogo,
+  //   personImg: person4,
+  // },
 ];
 
 function ClientReview() {
@@ -62,7 +64,8 @@ function ClientReview() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      shouldUpdate && setActive((prev) => (prev >= 3 ? 0 : prev + 1));
+      shouldUpdate &&
+        setActive((prev) => (prev >= data?.length - 1 ? 0 : prev + 1));
     }, 5000);
 
     return () => {
@@ -87,6 +90,7 @@ function ClientReview() {
                   index={index}
                   active={active}
                   setActive={setActive}
+                  length={data?.length}
                   setShouldUpdate={setShouldUpdate}
                 />
               ))}

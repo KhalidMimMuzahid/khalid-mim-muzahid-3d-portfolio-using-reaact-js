@@ -22,10 +22,10 @@ module.exports = {
 
         /* #F0F5F9, #C9D6DF,#52616B, #1E2022  #d88e26*/
 
-        // "primary-lite": "#3C6255",
-        // "secondary-lite": "#61876E",
-        // "tertiary-lite": "#A6BB8D",
-        // "quaternary-lite": "#EAE7B1",
+        // "primary-lite": "#EAE7B1",
+        // "secondary-lite": "#A6BB8D",
+        // "tertiary-lite": "#61876E",
+        // "quaternary-lite": "#3C6255",
 
         // "primary-lite": "#2F5D62",
         // "secondary-lite": "#5E8B7E",

@@ -38,7 +38,7 @@ const Navbar = () => {
         scrolled
           ? theme === "dark"
             ? "bg-primary"
-            : "bg-[#F0F5F9]"
+            : "bg-[#ced3d6]"
           : "bg-transparent"
       }`}
     >

@@ -1,6 +1,7 @@
 import aboutMe from "./../assets/audio/sounds/_about me .mp3";
 import contactMe from "./../assets/audio/sounds/_contact me .mp3";
-import messageSent from "./../assets/audio/sounds/_message sent succes.mp3";
+import messageSent from "./../assets/audio/sounds/Message sent success.mp3";
+import somethingWrong from "./../assets/audio/sounds/something went wrong.mp3";
 import musicOff from "./../assets/audio/sounds/_music off .mp3";
 import musicOn from "./../assets/audio/sounds/_music on .mp3";
 import soundOff from "./../assets/audio/sounds/_sound off  (1).mp3";
@@ -25,6 +26,7 @@ const audios = {
   aboutMe,
   contactMe,
   messageSent,
+  somethingWrong,
   musicOff,
   musicOn,
   soundOff,

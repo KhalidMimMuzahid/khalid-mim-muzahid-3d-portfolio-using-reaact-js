@@ -7,8 +7,9 @@ import ParticlesBackgroundLight from "./particles/ParticlesBackgroundLight";
 
 import FirstWelcomePage from "./FirstWelcomePage/FirstWelcomePage";
 import Footer from "../../components/Footer";
+import "react-toastify/dist/ReactToastify.css";
 const Parent = () => {
-  const { theme, music } = useContext(UIContext);
+  const { theme, music, sound } = useContext(UIContext);
   const [justCome, setJustCome] = useState(true);
 
   return (
@@ -29,7 +30,11 @@ const Parent = () => {
       </div>
 
       <div style={{ display: justCome ? "block" : "none" }}>
-        <FirstWelcomePage setJustCome={setJustCome} music={music} />
+        <FirstWelcomePage
+          setJustCome={setJustCome}
+          music={music}
+          sound={sound}
+        />
       </div>
     </div>
   );
