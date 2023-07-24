@@ -77,7 +77,7 @@ const Contact = () => {
     <div className="w-full">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>Get in touch</p>
-        <h2 className={`${styles.sectionHeadText}`}>Contact..</h2>
+        <h2 className={`${styles.sectionHeadText}`}>Contact.</h2>
       </motion.div>
       <div
         style={{
@@ -115,7 +115,7 @@ const Contact = () => {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="What's your web address?"
+                placeholder="What's your email address?"
                 className="bg-secondary-lite dark:bg-primary py-2 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
               />
             </label>

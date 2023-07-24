@@ -10,8 +10,8 @@ function EachCarouselSection({ item }) {
       style={{
         width:
           screenWidth < 640
-            ? `${screenWidth - 67}px`
-            : `${screenWidth - 144}px`,
+            ? `${screenWidth - 54}px`
+            : `${screenWidth - 134}px`,
       }}
       className={`rounded-xl  p-4 md:p-8   overflow-hidden    border-4   border-white dark:border-black 
       bg-gradient-to-r from-tertiary-lite dark:from-[#040712] to-secondary-lite  dark:to-tertiary 
@@ -36,7 +36,6 @@ function EachCarouselSection({ item }) {
           className="absolute bottom-0 right-0 h-[120px] xs:h-[150px] md:h-[200px]"
         />
       </div>
-      
     </div>
   );
 }
