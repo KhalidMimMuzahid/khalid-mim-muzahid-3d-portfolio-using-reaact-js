@@ -17,6 +17,21 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
+import bootstrap from "./tech/bootstrap.png";
+import mui from "./tech/mui.png";
+import socketIO from "./tech/socket.png";
+import python from "./tech/python.png";
+import jwt from "./tech/jwt.png";
+import firebase from "./tech/firebase.png";
+import expressJS from "./tech/express.png";
+import dataStructure from "./tech/database structure.png";
+import algorithm from "./tech/algorithm.png";
+import redux from "./tech/redux.png";
+import nextJS from "./tech/next.png";
+import amazonS3 from "./tech/AmazonS3.png";
+import amazonEc2 from "./tech/AmazonEc2.png";
+import problemSolving from "./tech/Problem Solving.png";
+
 import gog from "./company/gog.png";
 import job_junction from "./company/job_junction.png";
 
@@ -37,6 +52,20 @@ export {
   tailwind,
   typescript,
   threejs,
+  bootstrap,
+  mui,
+  socketIO,
+  python,
+  jwt,
+  firebase,
+  expressJS,
+  dataStructure,
+  algorithm,
+  redux,
+  nextJS,
+  amazonS3,
+  amazonEc2,
+  problemSolving,
   gog,
   job_junction,
   profilePhoto,

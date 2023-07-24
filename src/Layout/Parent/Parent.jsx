@@ -15,10 +15,10 @@ const Parent = () => {
   return (
     <div className={`${theme} overflow-hidden `}>
       <div
-        className="max-w-[1440px] mx-auto "
+        className="max-w-[1440px] mx-auto   "
         style={{ display: justCome ? "none" : "block" }}
       >
-        <div className={`relative z-0  `}>
+        <div className={`relative z-0 `}>
           <Navbar />
           <div className="">
             <Outlet />

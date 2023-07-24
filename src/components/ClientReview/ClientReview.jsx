@@ -46,6 +46,7 @@ const data = [
     img: pHero,
     personImg: habib,
   },
+
   // {
   //   id: 4,
   //   heading: "Tier-3 college to 6 stars on CodeChef",

@@ -29,8 +29,13 @@ const ProjectCard = ({ index, project, setProjectDetails, theme }) => {
           }}
           className="bg-gradient-to-r from-tertiary-lite dark:from-primary to-secondary-lite  dark:to-tertiary overflow-hidden  rounded-[20px]  min-h-[280px]"
         >
-          <div className="w-full ">
-            <img className="w-full" src={thumbNail} alt="" srcSet="" />
+          <div className="w-full p-4 pb-0 ">
+            <img
+              className="w-full h-[150px]"
+              src={thumbNail}
+              alt=""
+              srcSet=""
+            />
           </div>
           <div className="p-4">
             <h3 className="text-white-100 text-[16px] font-bold ">
@@ -73,7 +78,7 @@ const Works = () => {
     fetch("https://my-portfolio-snowy-zeta.vercel.app/projects")
       .then((res) => res.json())
       .then((data) => {
-        console.log("dataxxxxxxxxxxxxxxxxx:", data);
+        // console.log("dataxxxxxxxxxxxxxxxxx:", data);
         setProjects(data);
       });
   }, []);

@@ -15,7 +15,21 @@ import {
   gog,
   job_junction,
   threejs,
-} from "../assets";
+  bootstrap,
+  mui,
+  socketIO,
+  python,
+  jwt,
+  firebase,
+  expressJS,
+  dataStructure,
+  algorithm,
+  redux,
+  nextJS,
+  amazonS3,
+  amazonEc2,
+  problemSolving,
+} from "../assets/index";
 
 export const navLinks = [
   {
@@ -56,6 +70,62 @@ const services = [
 
 const technologies = [
   {
+    name: "Bootstrap",
+    icon: bootstrap,
+  },
+  {
+    name: "Mui",
+    icon: mui,
+  },
+  {
+    name: "Socket io",
+    icon: socketIO,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "JWT",
+    icon: jwt,
+  },
+  {
+    name: "Firebase",
+    icon: firebase,
+  },
+  {
+    name: "Express Js",
+    icon: expressJS,
+  },
+  {
+    name: "Data Structure",
+    icon: dataStructure,
+  },
+  {
+    name: "Algorithm",
+    icon: algorithm,
+  },
+  {
+    name: "Redux",
+    icon: redux,
+  },
+  {
+    name: "Next Js",
+    icon: nextJS,
+  },
+  {
+    name: "Amazon S3",
+    icon: amazonS3,
+  },
+  {
+    name: "Amazon EC2",
+    icon: amazonEc2,
+  },
+  {
+    name: "Problem Solving",
+    icon: problemSolving,
+  },
+  {
     name: "HTML 5",
     icon: html,
   },
@@ -75,11 +145,6 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
   {
     name: "Node JS",
     icon: nodejs,
@@ -88,6 +153,11 @@ const technologies = [
     name: "MongoDB",
     icon: mongodb,
   },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+
   {
     name: "Three JS",
     icon: threejs,

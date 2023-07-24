@@ -10,10 +10,10 @@ function EachCarouselSection({ item }) {
       style={{
         width:
           screenWidth < 640
-            ? `${screenWidth - 72}px`
-            : `${screenWidth - 152}px`,
+            ? `${screenWidth - 67}px`
+            : `${screenWidth - 144}px`,
       }}
-      className={`rounded-xl  p-8  overflow-hidden    border-4   border-white dark:border-black 
+      className={`rounded-xl  p-4 md:p-8   overflow-hidden    border-4   border-white dark:border-black 
       bg-gradient-to-r from-tertiary-lite dark:from-[#040712] to-secondary-lite  dark:to-tertiary 
        hover:cursor-grab`}
     >
@@ -26,16 +26,17 @@ function EachCarouselSection({ item }) {
             {item?.description}
           </p>
           <p className="text-[#2242fa] text-lg font-medium">{item?.name}</p>
-          <p className="text-sm text-[#2243fa] my-2 h-12 md:h-auto">
+          <p className="text-sm text-[#2243fa] my-2 h-12 sm:h-auto">
             {item?.position}
           </p>
           <img src={item?.img} className="h-[40px]" />
         </div>
         <img
           src={item?.personImg}
-          className="absolute bottom-0 right-0 h-[40%] sm:h-[50%]"
+          className="absolute bottom-0 right-0 h-[120px] xs:h-[150px] md:h-[200px]"
         />
       </div>
+      
     </div>
   );
 }

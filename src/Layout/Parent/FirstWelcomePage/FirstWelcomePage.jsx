@@ -15,7 +15,6 @@ const FirstWelcomePage = ({ setJustCome, music, sound }) => {
       style={{ height: "100vh" }}
       animationData={welcome}
       loop={false}
-      speed={8}
       onComplete={() => {
         setLottieName("hi-fi");
       }}
@@ -39,7 +38,7 @@ const FirstWelcomePage = ({ setJustCome, music, sound }) => {
   );
 
   return (
-    <div className="">
+    <div className="bg-white">
       {lottieName === "welcome" ? welcomeLottie : hiFiveLottie}
     </div>
   );

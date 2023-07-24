@@ -325,8 +325,8 @@ label:after {
 #sound-toggle-button .button::before {
   position: absolute;
   content: "";
-  width: 38px;
-  height: 38px;
+  width: 45px;
+  height: 45px;
   border-radius: inherit;
   background-color: transparent;
   background-image: linear-gradient(145deg, #262626, #3b3b3b);
@@ -334,9 +334,9 @@ label:after {
   box-shadow: 10px 10px 20px #141414, -5px -5px 20px #3d3d3d;
 }
 #sound-toggle-button .button .icon {
-  width: 32px;
-  height: 32px;
-  padding: 4px;
+  width: 39px;
+  height: 39px;
+  padding: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -397,8 +397,10 @@ label:after {
 #music-toggle-button .button::before {
   position: absolute;
   content: "";
-  width: 38px;
-  height: 38px;
+  /* width: 38px;
+  height: 38px; */
+  width: 45px;
+  height: 45px;
   border-radius: inherit;
   background-color: transparent;
   background-image: linear-gradient(145deg, #262626, #3b3b3b);
@@ -406,8 +408,10 @@ label:after {
   box-shadow: 10px 10px 20px #141414, -5px -5px 20px #3d3d3d;
 }
 #music-toggle-button .button .icon {
-  width: 32px;
-  height: 32px;
+  /* width: 32px;
+  height: 32px; */
+  width: 39px;
+  height: 39px;
   padding: 8px;
   display: flex;
   align-items: center;

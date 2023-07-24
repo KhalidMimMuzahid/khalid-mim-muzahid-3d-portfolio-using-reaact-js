@@ -100,7 +100,7 @@ const Navbar = () => {
         </ul>
         <div className=" flex   items-center">
           <div className="flex items-center gap-2">
-            <div className="fixed flex gap-[15px] bottom-[15px] right-[15px]">
+            <div className="fixed flex flex-col gap-[15px] bottom-[15px] right-[15px]">
               <div id="sound-toggle-button">
                 <input
                   type="checkbox"

@@ -10,7 +10,7 @@ const Footer = () => {
     bg-gradient-to-r from-tertiary-lite dark:from-primary to-secondary-lite  dark:to-tertiary 
     "
     >
-      <div className="flex flex-col md:flex-row items-center lg:items-start lg:justify-between  gap-3 md:gap-0">
+      <div className="flex flex-col md:flex-row items-center lg:items-start lg:justify-between   gap-3 md:gap-0">
         <div className="grow lg:h-full  flex items-center justify-start gap-2 xl:gap-4">
           <div className=" ">
             <img
