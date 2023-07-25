@@ -17,11 +17,18 @@ const ExperienceCard = ({ experience, theme }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: theme === "dark" ? "#1d1836" : "#282b2e",
+        // background: theme === "dark" ? "#1d1836" : "#00909E",
+
+        background:
+          theme === "dark"
+            ? "linear-gradient( 90deg ,#050816,#151030)"
+            : "linear-gradient( 90deg ,#27496D, #00909E)",
         color: theme === "dark" ? "#fff" : "#1E2022",
+        boxShadow: "0px 35px 120px -15px #211e35",
+        border: theme === "dark" ? "2px solid black" : "2px solid white",
       }}
       contentArrowStyle={{
-        borderRight: `7px solid  ${theme === "dark" ? "#282b2e" : ""}`,
+        borderRight: `10px solid  ${theme === "dark" ? "#000" : "#fff"}`,
       }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg, color: "#000" }}
@@ -77,7 +84,7 @@ const Experience = () => {
         <VerticalTimeline
         // lineColor={theme === "dark" ? "#fff" : "#000"}
         >
-          {experiences.map((experience, index) => (
+          {experiences?.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}

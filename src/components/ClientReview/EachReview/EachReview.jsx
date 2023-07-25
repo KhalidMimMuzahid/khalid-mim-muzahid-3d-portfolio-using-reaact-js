@@ -49,10 +49,10 @@ function EachReview({
               {item?.description}
             </p>
             <div className="mt-10">
-              <p className="text-[#2242fa] font-semibold text-lg">
+              <p className="text-black dark:text-[#2242fa] font-semibold text-lg">
                 {item?.name}
               </p>
-              <p className="text-[#2242fa] font-medium my-3">
+              <p className="text-black dark:text-[#2242fa] font-medium my-3">
                 {item?.position}
               </p>
               {item?.img && (

@@ -38,7 +38,7 @@ const Navbar = () => {
         scrolled
           ? theme === "dark"
             ? "bg-primary"
-            : "bg-[#ced3d6]"
+            : "bg-primary-lite"
           : "bg-transparent"
       }`}
     >
@@ -70,7 +70,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="list-none hidden md:flex flex-row gap-4 ">
+        <ul className="list-none hidden md:flex  flex-row gap-4 ">
           {navLinks.map((nav) => (
             <div id="topnavbarfordesktop" key={nav.id}>
               <div
@@ -86,7 +86,7 @@ const Navbar = () => {
                 }}
               >
                 <a
-                  className="text-center flex items-center justify-center"
+                  className="text-center  flex items-center justify-center"
                   href={`#${nav.id}`}
                 >
                   {nav.title}

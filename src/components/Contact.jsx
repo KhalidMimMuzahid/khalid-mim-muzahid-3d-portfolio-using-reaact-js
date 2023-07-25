@@ -88,7 +88,7 @@ const Contact = () => {
       >
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className=" grow     border-2 border-white dark:border-black shadow-card p-8 rounded-2xl bg-gradient-to-r from-tertiary-lite dark:from-primary to-secondary-lite  dark:to-tertiary 
+          className=" grow  border-2 border-white dark:border-black shadow-card p-8 rounded-2xl bg-gradient-to-r from-tertiary-lite dark:from-primary to-secondary-lite  dark:to-tertiary 
           "
         >
           <form

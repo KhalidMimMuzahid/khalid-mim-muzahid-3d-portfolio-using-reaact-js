@@ -31,7 +31,7 @@ const ModalForProjectDetails = ({
           height: "900px",
         }}
         method="dialog"
-        className="modal-box h-full   dark:md:bg-gradient-to-r dark:md:from-primary dark:md:to-tertiary  md:border-4 dark:md:border-black dark:md:shadow-card
+        className="modal-box h-full bg-primary-lite dark:md:bg-gradient-to-r dark:md:from-primary dark:md:to-tertiary  md:border-4 dark:md:border-black dark:md:shadow-card
         md:bg-gradient-to-r md:from-tertiary-lite md:to-secondary-lite md:border-white-100 md:shadow-card
         "
       >
@@ -53,28 +53,28 @@ const ModalForProjectDetails = ({
                 <h1>is loading</h1>
               </div>
             ) : (
-              <div className="card md:pr-4   mx-auto  shadow-xl">
+              <div className="card md:pr-4   mx-auto   shadow-xl px-2 md:px-0">
                 <figure>
                   <img src={thumbNail} alt="Shoes" />
                 </figure>
                 <div className="card-body mx-0 px-0">
-                  <h2 className="card-title text-white-100 font-extrabold">
+                  <h2 className="card-title text-tertiary-lite dark:text-white-100 font-extrabold">
                     {projectName}
                   </h2>
-                  <p className=" text-justify text-secondary">
-                    <span className="font-extrabold text-white-100">
+                  <p className=" text-justify text-secondary-lite dark:text-secondary">
+                    <span className="font-extrabold text-tertiary-lite dark:text-white-100 ">
                       Introduction:{" "}
                     </span>
                     {introduction}
                   </p>
                   <p>
-                    <span className="font-extrabold text-white-100">
+                    <span className="font-extrabold text-tertiary-lite dark:text-white-100 ">
                       Objective:
                     </span>
                     <ul className="list-disc ml-8">
                       {objectives?.map((eachObjective) => (
                         <li
-                          className=" text-justify text-secondary"
+                          className=" text-justify text-secondary-lite dark:text-secondary"
                           key={objectives.indexOf(eachObjective)}
                         >
                           {eachObjective}
@@ -83,13 +83,13 @@ const ModalForProjectDetails = ({
                     </ul>
                   </p>
                   <p>
-                    <span className="font-extrabold text-white-100">
+                    <span className="font-extrabold text-tertiary-lite dark:text-white-100 ">
                       System Features:
                     </span>
                     <ul className="list-disc ml-8">
                       {systemFeatures?.map((eachSystem) => (
                         <li
-                          className="text-justify text-secondary"
+                          className="text-justify text-secondary-lite dark:text-secondary"
                           key={systemFeatures.indexOf(eachSystem)}
                         >
                           {eachSystem}
@@ -98,12 +98,12 @@ const ModalForProjectDetails = ({
                     </ul>
                   </p>
                   <p>
-                    <span className="font-extrabold text-white-100">
+                    <span className="font-extrabold text-tertiary-lite dark:text-white-100 ">
                       Tools and Technology:
                     </span>{" "}
                     {toolsAndTechnologies?.map((eachTools) => (
                       <span
-                        className="text-secondary"
+                        className="text-secondary-lite dark:text-secondary"
                         key={toolsAndTechnologies.indexOf(eachTools)}
                       >
                         {eachTools},{" "}

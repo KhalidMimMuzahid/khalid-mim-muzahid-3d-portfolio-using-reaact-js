@@ -173,7 +173,7 @@ const experiences = [
     title: "Sr. Full Stack Web Developer",
     company_name: "Geeks of Gurukul",
     icon: gog,
-    iconBg: "#E6DEDD",
+    iconBg: "#00909E",
     date: "April 2023 - July 2023",
     points: [
       "Led and managed a team of 7 developers and 2 UI/UX designers, fostering a productive and cohesive environment.",
@@ -186,7 +186,7 @@ const experiences = [
     title: "Leadership Development Manager",
     company_name: "Job Junction - Group Project",
     icon: job_junction,
-    iconBg: "#E6DEDD",
+    iconBg: "#00909E",
     date: "Feb 2023 - March 2023",
     points: [
       "Collaborated with designers, developers, and project managers to develop and maintain web applications.",

@@ -41,7 +41,7 @@ const ParticlesBackgroundLight = () => {
             },
           },
           color: {
-            value: "#989fa3",
+            value: "#00909E",
           },
           shape: {
             type: "polygon",
@@ -66,7 +66,7 @@ const ParticlesBackgroundLight = () => {
           links: {
             enable: false,
             distance: 200,
-            color: "#52616B",
+            color: "#27496D",
             opacity: 1,
             width: 2,
           },
@@ -98,7 +98,7 @@ const ParticlesBackgroundLight = () => {
               duration: 2,
               size: 20,
               opacity: 0.8,
-              color: "#52616B",
+              color: "#27496D",
               mix: true,
             },
             repulse: {
@@ -113,7 +113,7 @@ const ParticlesBackgroundLight = () => {
           },
         },
         background: {
-          color: "#ced3d6",
+          color: "#d5fbff",
         },
       }}
     />

@@ -25,8 +25,10 @@ function EachCarouselSection({ item }) {
           <p className="text-sm text-secondary text-justify my-5 md:w-[60%] w-full">
             {item?.description}
           </p>
-          <p className="text-[#2242fa] text-lg font-medium">{item?.name}</p>
-          <p className="text-sm text-[#2243fa] my-2 h-12 sm:h-auto">
+          <p className="text-black dark:text-[#2242fa]  text-lg font-medium">
+            {item?.name}
+          </p>
+          <p className="text-sm text-black dark:text-[#2242fa] my-2 h-12 sm:h-auto">
             {item?.position}
           </p>
           <img src={item?.img} className="h-[40px]" />

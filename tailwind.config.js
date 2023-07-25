@@ -15,10 +15,10 @@ module.exports = {
         // "tertiary-lite": "#9DF3C4",
         // "quaternary-lite": "#D7FBE8",
 
-        "primary-lite": "#C9D6DF",
-        "secondary-lite": "#5c6267",
-        "tertiary-lite": "#282b2e",
-        "quaternary-lite": "#1E2022",
+        // "primary-lite": "#C9D6DF",
+        // "secondary-lite": "#5c6267",
+        // "tertiary-lite": "#282b2e",
+        // "quaternary-lite": "#1E2022",
 
         /* #F0F5F9, #C9D6DF,#52616B, #1E2022  #d88e26*/
 
@@ -32,10 +32,10 @@ module.exports = {
         // "tertiary-lite": "#A7C4BC",
         // "quaternary-lite": "#DFEEEA",
 
-        // "primary-lite": "#142850",
-        // "secondary-lite": "#27496D",
-        // "tertiary-lite": "#00909E",
-        // "quaternary-lite": "#DAE1E7",
+        "primary-lite": "#d5fbff",
+        "secondary-lite": "#00909E",
+        "tertiary-lite": "#27496D",
+        "quaternary-lite": "#142850",
 
         // "primary-lite": "#1A374D",
         // "secondary-lite": "#406882",

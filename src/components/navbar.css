@@ -205,11 +205,11 @@
   /* #F0F5F9, #C9D6DF,#52616B, #1E2022  #d88e26*/
   background: linear-gradient(
     90deg,
-    #1e2022,
-    #ff00e0,
+    #142850,
+    #d88e26,
+    #00909E,
     #2243fa,
-    #3bff5a,
-    #1e2022
+    #142850
   );
   background-size: 400%;
   -webkit-text-fill-color: transparent;
