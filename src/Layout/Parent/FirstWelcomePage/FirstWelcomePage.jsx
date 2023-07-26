@@ -6,7 +6,7 @@ import welcome from "../../../assets/lottie/welcome.json";
 
 const FirstWelcomePage = ({ setJustCome, music, sound }) => {
   const lottieRef = useRef();
-  lottieRef?.current?.setSpeed(2);
+  lottieRef?.current?.setSpeed(3);
   const [lottieName, setLottieName] = useState("welcome");
 
   const welcomeLottie = (

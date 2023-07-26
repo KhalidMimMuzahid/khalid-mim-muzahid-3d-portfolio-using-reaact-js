@@ -8,7 +8,6 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { UIContext } from "../contexts/UIProvider/UIProvider";
 import ModalForProjectDetails from "./ModalForProjectDetails";
 import "./work.css";
-import { useNavigate } from "react-router-dom";
 import { projects } from "../constants";
 import { playSound } from "../utils/playAudio";
 const ProjectCard = ({
@@ -29,7 +28,7 @@ const ProjectCard = ({
     <Tilt className="xs:w-[340px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="w-full  p-[1px] rounded-[20px] shadow-card hover:cursor-grab"
+        className="w-full p-[1px] rounded-[20px] shadow-card hover:cursor-grab"
       >
         <div
           options={{
@@ -81,27 +80,13 @@ const ProjectCard = ({
     </Tilt>
   );
 };
-const Works = () => {
+const AllProjects = () => {
   const { screenWidth, theme, sound } = useContext(UIContext);
   const [projectDetails, setProjectDetails] = useState({});
-  const [projectsTemp, setProjectsTemp] = useState([]);
-  const [shouldShowAllButton, setShouldShowAllButton] = useState(false);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (projects?.length > 3) {
-      setProjectsTemp(projects?.slice(0, 3));
-      setShouldShowAllButton(true);
-    } else {
-      setProjectsTemp(projects);
-      setShouldShowAllButton(false);
-    }
-  }, []);
-
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
+        {/* <p className={`${styles.sectionSubText} `}>My work</p> */}
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
@@ -119,7 +104,7 @@ const Works = () => {
       </div>
 
       <div className="mt-10 flex flex-wrap justify-center gap-10">
-        {projectsTemp?.map((project, index) => (
+        {projects?.map((project, index) => (
           <ProjectCard
             key={`${index}`}
             index={index}
@@ -131,25 +116,7 @@ const Works = () => {
           />
         ))}
       </div>
-      {shouldShowAllButton && (
-        <div
-          className=" mt-12 md:mt-16 flex justify-center"
-          id={
-            theme === "dark" ? "see-all-project" : "see-all-project-light-mode"
-          }
-        >
-          <button
-            onClick={() => {
-              sound === "on" && playSound("allProjects");
-              navigate("/projects");
-            }}
-            type="submit"
-            className="bg-primary py-2 px-8 rounded-xl outline-none w-[340px]   text-white font-bold shadow-md shadow-primary"
-          >
-            See All
-          </button>
-        </div>
-      )}
+
       {/* modal for project */}
       <ModalForProjectDetails
         screenWidth={screenWidth}
@@ -162,4 +129,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "work");
+export default SectionWrapper(AllProjects, "work");

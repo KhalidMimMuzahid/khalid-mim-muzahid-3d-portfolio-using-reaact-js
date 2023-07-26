@@ -6,7 +6,7 @@ export const UIContext = createContext();
 const UIProvider = ({ children }) => {
   const [theme, setTheme] = useState("dark");
   const [sound, setSound] = useState("on");
-  const [music, setMusic] = useState("on");
+  const [music, setMusic] = useState("off");
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   useEffect(() => {

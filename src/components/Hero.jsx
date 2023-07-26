@@ -29,7 +29,7 @@ const Hero = () => {
     anchor.target = "_blank";
     anchor.download = "file.pdf"; // Change the filename as desired.
     anchor.click();
-    sound === "on" && playSound("resumeDownloaded");
+    sound === "on" && playSound("downloadingResume");
     // Clean up the temporary anchor element.
     document.body.removeChild(anchor);
   };

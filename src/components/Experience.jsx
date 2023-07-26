@@ -26,12 +26,17 @@ const ExperienceCard = ({ experience, theme }) => {
         color: theme === "dark" ? "#fff" : "#1E2022",
         boxShadow: "0px 35px 120px -15px #211e35",
         border: theme === "dark" ? "2px solid black" : "2px solid white",
+        borderRadius: "20px",
       }}
       contentArrowStyle={{
-        borderRight: `10px solid  ${theme === "dark" ? "#000" : "#fff"}`,
+        borderRight: `15px solid  ${theme === "dark" ? "#000" : "#fff"}`,
       }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg, color: "#000" }}
+      iconStyle={{
+        // background: experience.iconBg,
+        background: theme === "dark" ? "#aaa6c3" : "#00909E",
+        color: "#000",
+      }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
           <img
@@ -41,7 +46,6 @@ const ExperienceCard = ({ experience, theme }) => {
           />
         </div>
       }
-      iconClassName={""}
     >
       <div>
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
@@ -82,7 +86,7 @@ const Experience = () => {
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline
-        // lineColor={theme === "dark" ? "#fff" : "#000"}
+        //  lineColor={theme === "dark" ? "#fff" : "#000"}
         >
           {experiences?.map((experience, index) => (
             <ExperienceCard

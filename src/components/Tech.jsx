@@ -9,7 +9,7 @@ const Tech = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>Technologies</p>
-        <h2 className={`${styles.sectionHeadText}`}>Techs, I known.</h2>
+        <h2 className={`${styles.sectionHeadText}`}>Techs, I know.</h2>
       </motion.div>
       <motion.div className="flex flex-wrap mt-8  justify-center gap-[6px] xs:gap-[16px]  md:gap-[22px] lg:gap-[24px] ">
         {technologies?.map((technology, index) => (

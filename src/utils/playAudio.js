@@ -11,7 +11,11 @@ import welcome from "./../assets/audio/sounds/_welcome .mp3";
 import welcomeDefault from "./../assets/audio/sounds/welcome.mp3";
 import darkThemeActivated from "./../assets/audio/sounds/dark theme activated.mp3";
 import darkThemeDeactivated from "./../assets/audio/sounds/dark theme deactivat.mp3";
-import resumeDownloaded from "./../assets/audio/sounds/resume downloaded.mp3";
+import downloadingResume from "./../assets/audio/sounds/downloading resume.mp3";
+import closingProject from "./../assets/audio/sounds/closing project deta.mp3";
+import openingProject from "./../assets/audio/sounds/opening project deta.mp3";
+import myBlogs from "./../assets/audio/sounds/my blogs.mp3";
+import allProjects from "./../assets/audio/sounds/all projects.mp3";
 
 import dropTheTapes from "./../assets/audio/bgm/Drop the Tapes - TrackTribe.mp3";
 import goGOGO from "./../assets/audio/bgm/Go Go Go - Kwon.mp3";
@@ -37,7 +41,11 @@ const audios = {
   welcomeDefault,
   darkThemeActivated,
   darkThemeDeactivated,
-  resumeDownloaded,
+  downloadingResume,
+  closingProject,
+  openingProject,
+  myBlogs,
+  allProjects,
 };
 const musics = [
   {

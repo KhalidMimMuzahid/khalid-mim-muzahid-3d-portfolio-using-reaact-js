@@ -1,9 +1,9 @@
 import logoDarkMode from "./logoDarkMode.svg";
 import logoLightMode from "./logoLightMode.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
+import backend from "./role/backend.png";
+import creator from "./role/creator.png";
+import mobile from "./role/mobile.png";
+import web from "./role/web.png";
 import profilePhoto from "./KhalidMimMuzahid.jpg";
 
 import css from "./tech/css.png";

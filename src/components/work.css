@@ -16,6 +16,41 @@
   border: 1px solid #d88e26;
   box-shadow: 2px 2px 2px 1px #d88e26a3;
 }
+
+
+#see-all-project button {
+  border: 1px solid #ffffff40;
+  box-shadow: 2px 2px 2px 1px #00000099;
+}
+
+#see-all-project button:hover {
+  border: 1px solid #2243fa;
+  box-shadow: 2px 2px 2px 1px #2242fa73;
+}
+#see-all-project-light-mode button {
+  border: 1px solid #ffffff;
+  box-shadow: 2px 2px 2px 1px #00000099;
+}
+
+#see-all-project-light-mode button:hover {
+  border: 1px solid #d88e26;
+  box-shadow: 2px 2px 2px 1px #d88e26a3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #project-details-anchor a {
   border: 1px solid #ffffff40;
 }

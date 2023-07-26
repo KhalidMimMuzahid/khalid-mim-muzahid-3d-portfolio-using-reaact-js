@@ -102,15 +102,17 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
+                required
                 value={form.name}
                 onChange={handleChange}
-                placeholder="What's your good name?"
+                placeholder="What's your name?"
                 className="bg-secondary-lite dark:bg-primary py-2 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
               />
             </label>
             <label className="flex flex-col">
               <span className="text-white  font-medium mb-2">Your email</span>
               <input
+                required
                 type="email"
                 name="email"
                 value={form.email}
@@ -122,6 +124,7 @@ const Contact = () => {
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your Message</span>
               <textarea
+                required
                 rows={5}
                 name="message"
                 value={form.message}

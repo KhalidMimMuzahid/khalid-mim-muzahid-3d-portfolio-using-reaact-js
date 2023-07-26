@@ -9,6 +9,7 @@ import Hamburger from "hamburger-react";
 import "./navbar.css";
 import { UIContext } from "../contexts/UIProvider/UIProvider";
 import { playMusic, playSound } from "../utils/playAudio";
+import { HashLink } from "react-router-hash-link";
 const Navbar = () => {
   const { theme, setTheme, sound, setSound, music, setMusic } =
     useContext(UIContext);
@@ -66,11 +67,11 @@ const Navbar = () => {
             }
           >
             Khalid &nbsp;
-            <span className="lg:block hidden "> Mim Muzahid</span>
+            <span className="sm:block hidden "> Mim Muzahid</span>
           </p>
         </Link>
 
-        <ul className="list-none hidden md:flex  flex-row gap-4 ">
+        <ul className="list-none hidden lg:flex  flex-row gap-4 ">
           {navLinks.map((nav) => (
             <div id="topnavbarfordesktop" key={nav.id}>
               <div
@@ -85,12 +86,13 @@ const Navbar = () => {
                   sound === "on" && playSound(nav.audio);
                 }}
               >
-                <a
+                <HashLink
                   className="text-center  flex items-center justify-center"
-                  href={`#${nav.id}`}
+                  // href={nav?.id !== "blogs" ? `#${nav.id}` : `${nav.id}`}
+                  to={nav.id}
                 >
                   {nav.title}
-                </a>
+                </HashLink>
 
                 <span></span>
                 <span></span>
@@ -337,7 +339,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="md:hidden ">
+          <div className="lg:hidden ">
             <Hamburger
               toggled={toggle}
               size={22}
@@ -355,9 +357,6 @@ const Navbar = () => {
                   className={
                     " py-2 px-2 md:p-0 z-[20] fixed top-[110px] mt-2 rounded-lg shadow-lg right-[00px] block "
                   }
-                  // darkMode
-                  // ? "bg-white py-2 px-2 md:p-0 z-50 fixed top-16 mt-2 rounded-lg shadow-lg right-2 block w-40"
-                  // : "bg-black py-2 px-2 md:p-0 z-50 fixed top-16 mt-2 rounded-lg shadow-lg right-2 block w-40"
                 >
                   <div
                     id={
@@ -382,10 +381,9 @@ const Navbar = () => {
                             sound === "on" && playSound(nav.audio);
                           }}
                         >
-                          <a href={`#${nav.id}`}>{nav.title}</a>
+                          <HashLink to={nav.id}>{nav.title}</HashLink>
                         </li>
                       ))}
-                      {/* {dashboard} */}
                     </ul>
                   </div>
                 </motion.div>
