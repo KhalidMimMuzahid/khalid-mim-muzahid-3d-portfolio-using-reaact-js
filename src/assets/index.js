@@ -1,3 +1,4 @@
+// for main assets 
 import logoDarkMode from "./logoDarkMode.svg";
 import logoLightMode from "./logoLightMode.svg";
 import backend from "./role/backend.png";
@@ -5,7 +6,7 @@ import creator from "./role/creator.png";
 import mobile from "./role/mobile.png";
 import web from "./role/web.png";
 import profilePhoto from "./KhalidMimMuzahid.jpg";
-
+// for tech skilss 
 import css from "./tech/css.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -16,7 +17,6 @@ import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-
 import bootstrap from "./tech/bootstrap.png";
 import mui from "./tech/mui.png";
 import socketIO from "./tech/socket.png";
@@ -31,9 +31,33 @@ import nextJS from "./tech/next.png";
 import amazonS3 from "./tech/AmazonS3.png";
 import amazonEc2 from "./tech/AmazonEc2.png";
 import problemSolving from "./tech/Problem Solving.png";
+import oop from "./tech/oop.png";
+import agile from "./tech/agile.png";
+import cplusplus from "./tech/cplusplus.png";
+import c from "./tech/c.png";
+import aws from "./tech/aws.png";
+import tdd from "./tech/tdd.png";
+import github from "./tech/github.png";
+import java from "./tech/java.png";
 
+// for job experiences 
 import gog from "./company/gog.png";
 import job_junction from "./company/job_junction.png";
+import accolite from "./company/accolite.png";
+
+// for testimonials 
+import city from "./StudentReview/city_university.png";
+import pHero from "./StudentReview/programming-hero.png";
+
+import habib from "./StudentReview/abdullah al habib.png";
+import ajay from "./StudentReview/ajay_katana.png";
+import jacobus from "./StudentReview/jacobus.png";
+import rakib from "./StudentReview/rakib_uddin.png";
+
+
+
+
+
 
 export {
   logoDarkMode,
@@ -42,6 +66,20 @@ export {
   creator,
   mobile,
   web,
+  profilePhoto,
+  gog,
+  job_junction,
+  accolite,
+
+  city ,
+  pHero ,
+  
+  habib ,
+  ajay ,
+  jacobus,
+  rakib ,
+
+
   css,
   git,
   html,
@@ -66,7 +104,12 @@ export {
   amazonS3,
   amazonEc2,
   problemSolving,
-  gog,
-  job_junction,
-  profilePhoto,
+  oop,
+  agile,
+  cplusplus,
+  c,
+  aws,
+  tdd,
+  github,
+  java,
 };

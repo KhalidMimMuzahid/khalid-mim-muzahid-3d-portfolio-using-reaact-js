@@ -3,6 +3,15 @@ import {
   backend,
   creator,
   web,
+  gog,
+  job_junction,
+  accolite,
+  city,
+  pHero,
+  habib,
+  ajay,
+  jacobus,
+  rakib,
   javascript,
   typescript,
   html,
@@ -12,8 +21,6 @@ import {
   nodejs,
   mongodb,
   git,
-  gog,
-  job_junction,
   threejs,
   bootstrap,
   mui,
@@ -29,6 +36,14 @@ import {
   amazonS3,
   amazonEc2,
   problemSolving,
+  oop,
+  agile,
+  cplusplus,
+  c,
+  aws,
+  tdd,
+  github,
+  java,
 } from "../assets/index";
 
 export const navLinks = [
@@ -72,91 +87,133 @@ const services = [
     icon: creator,
   },
 ];
-
+// todo list:
 const technologies = [
-  {
-    name: "Bootstrap",
-    icon: bootstrap,
-  },
-  {
-    name: "Mui",
-    icon: mui,
-  },
-  {
-    name: "Socket io",
-    icon: socketIO,
-  },
-  {
-    name: "Python",
-    icon: python,
-  },
-  {
-    name: "JWT",
-    icon: jwt,
-  },
-  {
-    name: "Firebase",
-    icon: firebase,
-  },
-  {
-    name: "Express Js",
-    icon: expressJS,
-  },
-  {
-    name: "Data Structure",
-    icon: dataStructure,
-  },
   {
     name: "Algorithm",
     icon: algorithm,
   },
   {
-    name: "Redux",
-    icon: redux,
+    name: "Agile",
+    icon: agile,
   },
   {
-    name: "Next Js",
-    icon: nextJS,
-  },
-  {
-    name: "Amazon S3",
-    icon: amazonS3,
+    name: "AWS",
+    icon: aws,
   },
   {
     name: "Amazon EC2",
     icon: amazonEc2,
   },
   {
-    name: "Problem Solving",
-    icon: problemSolving,
+    name: "Amazon S3",
+    icon: amazonS3,
   },
+
   {
-    name: "HTML 5",
-    icon: html,
+    name: "Bootstrap",
+    icon: bootstrap,
   },
   {
     name: "CSS 3",
     icon: css,
   },
   {
+    name: "C",
+    icon: c,
+  },
+  {
+    name: "C++",
+    icon: cplusplus,
+  },
+  {
+    name: "Data Structure",
+    icon: dataStructure,
+  },
+  {
+    name: "Express Js",
+    icon: expressJS,
+  },
+  {
+    name: "Firebase",
+    icon: firebase,
+  },
+
+  {
+    name: "Git",
+    icon: git,
+  },
+  {
+    name: "Github",
+    icon: github,
+  },
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
     name: "JavaScript",
     icon: javascript,
   },
+
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "Java",
+    icon: java,
+  },
+
+  {
+    name: "JWT",
+    icon: jwt,
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    name: "Mui",
+    icon: mui,
   },
   {
     name: "Node JS",
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Next Js",
+    icon: nextJS,
+  },
+  {
+    name: "OOP",
+    icon: oop,
+  },
+  {
+    name: "Problem Solving",
+    icon: problemSolving,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "Redux",
+    icon: redux,
+  },
+
+  {
+    name: "Socket io",
+    icon: socketIO,
+  },
+
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
+    name: "TDD",
+    icon: tdd,
   },
   {
     name: "Tailwind CSS",
@@ -167,19 +224,28 @@ const technologies = [
     name: "Three JS",
     icon: threejs,
   },
-  {
-    name: "git",
-    icon: git,
-  },
 ];
 
 const experiences = [
   {
-    title: "Sr. Full Stack Web Developer",
+    title: "Full Stack Web Developer (Remote)",
+    company_name: "Accolite",
+    icon: accolite,
+    iconBg: "#00909E",
+    date: "August 2022 - Sep 2023",
+    points: [
+      "Develop interactive UI using Next.js, Redux, and MUI, converting Figma designs into responsive components.",
+      "Collaborate with the team for code quality and user-centric experiences while managing code in Git repositories.",
+      "Build and maintain frontend applications, integrating third-party libraries, and daily GitHub commits for efficient version control.",
+      "Establish and maintain API connections for accurate data integration, while implementing robust data management and error-handling strategies.",
+    ],
+  },
+  {
+    title: "Full Stack Developer Intern (Remote)",
     company_name: "Geeks of Gurukul",
     icon: gog,
     iconBg: "#00909E",
-    date: "April 2023 - July 2023",
+    date: "April 2022 - July 2022",
     points: [
       "Led and managed a team of 7 developers and 2 UI/UX designers, fostering a productive and cohesive environment.",
       "Thrived on brainstorming, logic building, and meticulously analyzing the workflow to ensure successful project outcomes.",
@@ -192,7 +258,7 @@ const experiences = [
     company_name: "Job Junction - Group Project",
     icon: job_junction,
     iconBg: "#00909E",
-    date: "Feb 2023 - March 2023",
+    date: "Feb 2022 - March 2022",
     points: [
       "Collaborated with designers, developers, and project managers to develop and maintain web applications.",
       "Wrote clean, maintainable, and efficient code, troubleshooting, debugging & testing, and deploying web applications.",
@@ -201,9 +267,51 @@ const experiences = [
     ],
   },
 ];
+
+const testimonials = [
+  {
+    id: 1,
+    heading: "Exceptional Full-stack Developer",
+    description: `Khalid as a Full-stack Web Developer, his expertise in TypeScript, Mongoose, AWS (S3 and EC2), Redux.js, Node.js, and React.js is remarkable. Khalid's passion for his work and effective communication skills make him a valuable asset. He's a collaborative team player and an exceptional problem solver. I wholeheartedly endorse Khalid and have no doubt he will continue to excel in his future endeavors.`,
+    name: "Jacobus Badenhorst",
+    position: "Senior Full stack Developer",
+    img:  accolite,
+    personImg: jacobus,
+  },
+  {
+    id: 2,
+    heading: "Ready to Excel in Your Team",
+    description: `Khalid's result-oriented approach, clear vision, and deep understanding of project requirements ensured seamless collaboration and on-time project delivery. He consistently developed robust web applications with cutting-edge UI/UX designs that exceeded client expectations.
+      His leadership skills fostered a productive team environment, promoting open communication and innovative thinking. Khalid's technical expertise and mentorship empowered team members to excel and deliver outstanding results.`,
+    name: "Katana Sri Ajay",
+    position: "Analyst",
+    img: gog,
+    personImg: ajay,
+  },
+  {
+    id: 3,
+    heading: "Empowering Innovation and Collaboration",
+    description: `I highly recommend Khalid Mim Muzahid for the Leadership Development Manager role. He demonstrated exceptional skills in web application development, effective planning, and efficient collaboration as part of the Job Junction - Group Project at Programming Hero. His proactive approach and technical expertise will undoubtedly be a valuable addition to your team.`,
+    name: "Abdullah Al Habib",
+    position: "ob Placement Executive",
+    img: pHero,
+    personImg: habib,
+  },
+  {
+    id: 4,
+    heading: "Done his best in the final year project",
+    description: `Khalid's dedication, technical proficiency, and problem-solving abilities were instrumental in the project's success. He played a key role in developing user-friendly functionalities for medicine donation, reselling, and QR/barcode scanning.
+    Moreover, Khalid's teamwork, communication, and professionalism were exemplary, making him an invaluable asset to any team or organization.`,
+    name: "Md. Rakib Uddin",
+    position: "Assistant Professor ",
+    img: city,
+    personImg: rakib,
+  },
+];
+
 const projects = [
   {
-    _id: 4,
+    _id: 1,
 
     projectName: "Medi_Selll -medicine donation and reselling",
 
@@ -244,7 +352,7 @@ const projects = [
     liveSite: "https://medi-sell.web.app/",
   },
   {
-    _id: 1,
+    _id: 2,
 
     projectName: "Used Bike Bazar - A resale website for used bike.",
     introduction:
@@ -286,7 +394,7 @@ const projects = [
   },
 
   {
-    _id: 2,
+    _id: 3,
 
     projectName: "Need Aid -a online donation service for humanity.",
     introduction:
@@ -327,7 +435,7 @@ const projects = [
   },
 
   {
-    _id: 3,
+    _id: 4,
 
     projectName: "Pixel Shooter- A Photography service based website.",
     introduction:
@@ -363,4 +471,4 @@ const projects = [
     liveSite: "https://pixel-shooter-3d676.web.app/",
   },
 ];
-export { services, technologies, experiences, projects };
+export { services, technologies, experiences, testimonials, projects };

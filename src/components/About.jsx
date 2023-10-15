@@ -43,24 +43,29 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      <motion.p
+      <motion.div
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-quaternary-lite dark:text-secondary  text-[17px]  leading-[30px]e w-full text-justify"
+        className="mt-4 flex flex-col gap-4 text-quaternary-lite dark:text-secondary  text-[17px]  leading-[25px] e w-full text-justify"
       >
-        Hello, I'm Khalid Mim Muzahid, a passionate and self-motivated Leader in
-        Developer Relations and a Master in Stack Development. Programming is my
-        genuine passion, driving me to solve problems and implement unique
-        ideas. With a strong foundation in Computer Science and Engineering, I
-        have valuable experience as a Senior Full Stack Web Developer. I excel
-        in technologies like JavaScript, TypeScript, React, Node.js, and more. I
-        also have expertise in technical leadership and problem-solving. Let's
-        connect and explore how we can achieve exceptional outcomes together.
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
-      </motion.p>
+       <p>Greetings, I'm <b className="">Khalid Mim Muzahid</b>, a highly motivated Full Stack Web
+        Developer with a strong background in <b>Computer Science and Engineering</b>.
+        I hold expertise in a wide range of web development technologies,
+        including React, Node.js, MongoDB, and more. </p>
+        <p>I've had the privilege of working at both <b>Geeks of Gurukul</b> and <b>Accolite</b>,
+        where I've honed my skills and taken on leadership roles. At Accolite, I
+        specialized in front-end and back-end technologies, with experience in
+        AWS services. </p>
+  
+  
+        <p>My commitment to professional growth is evident through my active
+        engagement in the tech community. I'm currently seeking opportunities to
+        leverage my skills and expertise in web development for a
+        forward-thinking organization.</p>
+        <p>If you're looking for a dedicated and adaptable developer with a proven
+        track record of technical excellence, I'm eager to connect and discuss
+        how we can achieve outstanding results together.</p>
+      
+      </motion.div>
 
       <div className="mt-20 flex flex-wrap justify-center gap-10">
         {services.map((service, index) => (

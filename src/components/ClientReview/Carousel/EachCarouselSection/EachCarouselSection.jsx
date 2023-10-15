@@ -10,7 +10,7 @@ function EachCarouselSection({ item }) {
       style={{
         width:
           screenWidth < 640
-            ? `${screenWidth - 53}px`
+            ? `${screenWidth - 54}px`
             : `${screenWidth - 134}px`,
       }}
       className={`rounded-xl  p-4 md:p-8   overflow-hidden    border-4   border-white dark:border-black 

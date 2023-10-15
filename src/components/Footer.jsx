@@ -10,11 +10,11 @@ const Footer = () => {
     bg-gradient-to-r from-tertiary-lite dark:from-primary to-secondary-lite  dark:to-tertiary 
     "
     >
-      <div className="flex flex-col md:flex-row items-center lg:items-start lg:justify-between   gap-3 md:gap-0">
+      <div className="flex flex-col md:flex-row items-center  lg:justify-between   gap-3 md:gap-0">
         <div className="grow lg:h-full  flex items-center justify-start gap-2 xl:gap-4">
           <div className=" ">
             <img
-              className="w-[60px] sm:w-[70px] md:w-[100px] xl:w-[80px] rounded-full border-2"
+              className="w-[60px] sm:w-[70px] md:w-[100px] xl:w-[120px] rounded-full border-2"
               src={profilePhoto}
               alt=""
             />
@@ -212,7 +212,7 @@ const Footer = () => {
 		V385.92z"
                   />
                 </svg>
-                <span className="text-secondary">+8801716204599</span>
+                <span className="text-secondary">khalidmimm@gmail.com</span>
               </p>
               <p className="flex gap-1 justify-center md:justify-start">
                 <svg
@@ -228,7 +228,7 @@ const Footer = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span className="text-secondary">khalidmimm@gmail.com</span>
+                <span className="text-secondary">+8801716204599 </span>
               </p>
             </div>
           </div>
