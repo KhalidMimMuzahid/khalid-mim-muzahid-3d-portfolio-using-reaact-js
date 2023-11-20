@@ -37,7 +37,8 @@ const FirstWelcomePage = ({ setJustCome, music, sound }) => {
     >
       <Lottie style={{ height: "85%" }} animationData={hiFi} loop={true} />
       <h1 className="text-center relative font-bold top-[0px] md:top-[25px] text-2xl text-[#000000b7]">
-        Click anywhere to start !
+        {/* Click anywhere to start ! */}
+        Click anywhere to <span className="bg-[#3f9dbc] hover:bg-[#e3b131] px-2 py-1 rounded-xl">start</span>
       </h1>
     </div>
   );

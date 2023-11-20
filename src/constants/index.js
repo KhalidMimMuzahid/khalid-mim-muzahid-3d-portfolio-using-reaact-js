@@ -227,25 +227,25 @@ const technologies = [
 ];
 
 const experiences = [
-  {
-    title: "Full Stack Web Developer (Remote)",
-    company_name: "Accolite",
-    icon: accolite,
-    iconBg: "#00909E",
-    date: "August 2022 - Sep 2023",
-    points: [
-      "Develop interactive UI using Next.js, Redux, and MUI, converting Figma designs into responsive components.",
-      "Collaborate with the team for code quality and user-centric experiences while managing code in Git repositories.",
-      "Build and maintain frontend applications, integrating third-party libraries, and daily GitHub commits for efficient version control.",
-      "Establish and maintain API connections for accurate data integration, while implementing robust data management and error-handling strategies.",
-    ],
-  },
+  // {
+  //   title: "Full Stack Web Developer (Remote)",
+  //   company_name: "Accolite",
+  //   icon: accolite,
+  //   iconBg: "#00909E",
+  //   date: "August 2022 - Sep 2023",
+  //   points: [
+  //     "Develop interactive UI using Next.js, Redux, and MUI, converting Figma designs into responsive components.",
+  //     "Collaborate with the team for code quality and user-centric experiences while managing code in Git repositories.",
+  //     "Build and maintain frontend applications, integrating third-party libraries, and daily GitHub commits for efficient version control.",
+  //     "Establish and maintain API connections for accurate data integration, while implementing robust data management and error-handling strategies.",
+  //   ],
+  // },
   {
     title: "Full Stack Developer Intern (Remote)",
     company_name: "Geeks of Gurukul",
     icon: gog,
     iconBg: "#00909E",
-    date: "April 2022 - July 2022",
+    date: "April 2023 - July 2023",
     points: [
       "Led and managed a team of 7 developers and 2 UI/UX designers, fostering a productive and cohesive environment.",
       "Thrived on brainstorming, logic building, and meticulously analyzing the workflow to ensure successful project outcomes.",
@@ -269,17 +269,17 @@ const experiences = [
 ];
 
 const testimonials = [
+  // {
+  //   id: 1,
+  //   heading: "Exceptional Full-stack Developer",
+  //   description: `Khalid as a Full-stack Web Developer, his expertise in TypeScript, Mongoose, AWS (S3 and EC2), Redux.js, Node.js, and React.js is remarkable. Khalid's passion for his work and effective communication skills make him a valuable asset. He's a collaborative team player and an exceptional problem solver. I wholeheartedly endorse Khalid and have no doubt he will continue to excel in his future endeavors.`,
+  //   name: "Jacobus Badenhorst",
+  //   position: "Senior Full stack Developer",
+  //   img:  accolite,
+  //   personImg: jacobus,
+  // },
   {
     id: 1,
-    heading: "Exceptional Full-stack Developer",
-    description: `Khalid as a Full-stack Web Developer, his expertise in TypeScript, Mongoose, AWS (S3 and EC2), Redux.js, Node.js, and React.js is remarkable. Khalid's passion for his work and effective communication skills make him a valuable asset. He's a collaborative team player and an exceptional problem solver. I wholeheartedly endorse Khalid and have no doubt he will continue to excel in his future endeavors.`,
-    name: "Jacobus Badenhorst",
-    position: "Senior Full stack Developer",
-    img:  accolite,
-    personImg: jacobus,
-  },
-  {
-    id: 2,
     heading: "Ready to Excel in Your Team",
     description: `Khalid's result-oriented approach, clear vision, and deep understanding of project requirements ensured seamless collaboration and on-time project delivery. He consistently developed robust web applications with cutting-edge UI/UX designs that exceeded client expectations.
       His leadership skills fostered a productive team environment, promoting open communication and innovative thinking. Khalid's technical expertise and mentorship empowered team members to excel and deliver outstanding results.`,
@@ -289,7 +289,7 @@ const testimonials = [
     personImg: ajay,
   },
   {
-    id: 3,
+    id: 2,
     heading: "Empowering Innovation and Collaboration",
     description: `I highly recommend Khalid Mim Muzahid for the Leadership Development Manager role. He demonstrated exceptional skills in web application development, effective planning, and efficient collaboration as part of the Job Junction - Group Project at Programming Hero. His proactive approach and technical expertise will undoubtedly be a valuable addition to your team.`,
     name: "Abdullah Al Habib",
@@ -298,7 +298,7 @@ const testimonials = [
     personImg: habib,
   },
   {
-    id: 4,
+    id: 3,
     heading: "Done his best in the final year project",
     description: `Khalid's dedication, technical proficiency, and problem-solving abilities were instrumental in the project's success. He played a key role in developing user-friendly functionalities for medicine donation, reselling, and QR/barcode scanning.
     Moreover, Khalid's teamwork, communication, and professionalism were exemplary, making him an invaluable asset to any team or organization.`,
