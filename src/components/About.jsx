@@ -51,7 +51,9 @@ const About = () => {
         Developer with a strong background in <b>Computer Science and Engineering</b>.
         I hold expertise in a wide range of web development technologies,
         including React, Node.js, MongoDB, and more. </p>
-        <p>I've had the privilege of working at both <b>Geeks of Gurukul</b> and <b>Accolite</b>,
+        {/* <p>I've had the privilege of working at both <b>Geeks of Gurukul</b> and <b>Accolite</b>, */}
+        {/* removing Accolite  */}
+        <p>I've had the privilege of working at <b>Geeks of Gurukul</b> ,
         where I've honed my skills and taken on leadership roles. At Accolite, I
         specialized in front-end and back-end technologies, with experience in
         AWS services. </p>
