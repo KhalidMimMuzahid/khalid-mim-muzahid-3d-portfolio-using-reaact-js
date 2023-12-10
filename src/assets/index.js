@@ -44,6 +44,8 @@ import java from "./tech/java.png";
 import gog from "./company/gog.png";
 import job_junction from "./company/job_junction.png";
 import accolite from "./company/accolite.png";
+import drive_lah from "./company/drive_lah.jpeg";
+
 
 // for testimonials 
 import city from "./StudentReview/city_university.png";
@@ -67,19 +69,22 @@ export {
   mobile,
   web,
   profilePhoto,
+
+  // experience
   gog,
   job_junction,
   accolite,
+  drive_lah,
 
-  city ,
-  pHero ,
-  
-  habib ,
-  ajay ,
+  // testimonials
+  city,
+  pHero,
+  habib,
+  ajay,
   jacobus,
-  rakib ,
+  rakib,
 
-
+  // skills
   css,
   git,
   html,
