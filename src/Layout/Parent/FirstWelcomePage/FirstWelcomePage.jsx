@@ -9,7 +9,7 @@ const FirstWelcomePage = ({ setJustCome, music, sound }) => {
   const [lottieName, setLottieName] = useState("welcome");
   useEffect(() => {
     if (lottieRef?.current) {
-      lottieRef.current.setSpeed(2.3);
+      lottieRef.current.setSpeed(4);
     }
   }, []);
   const welcomeLottie = (
@@ -18,7 +18,7 @@ const FirstWelcomePage = ({ setJustCome, music, sound }) => {
       style={{ height: "100vh" }}
       animationData={welcome}
       loop={false}
-      playSpeed={4}
+      playSpeed={6}
       onComplete={() => {
         setLottieName("hi-fi");
       }}
