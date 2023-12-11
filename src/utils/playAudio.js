@@ -117,7 +117,7 @@ let music;
 let isPlaying = false;
 music = new Audio(youShould);
 music.loop = true; // Set loop property to true
-music.volume = 0.1; // Set the volume -> (between 0.0 and 1.0)
+music.volume = 0.1; // Set the volume --> (between 0.0 and 1.0)
 
 const playMusic = (actionType) => {
   if (actionType === "playDefault") {
