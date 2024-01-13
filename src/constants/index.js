@@ -5,7 +5,7 @@ import {
   web,
   gog,
   job_junction,
-  accolite,
+  triple_w_solutions,
   drive_lah,
   city,
   pHero,
@@ -226,27 +226,27 @@ const technologies = [
     icon: threejs,
   },
 ];
-
+// RTK · mongoos · MongoDB · Express.js · Redux.js · React.js
 const experiences = [
-  // {
-  //   title: "Full Stack Web Developer (Remote)",
-  //   company_name: "Accolite",
-  //   icon: accolite,
-  //   iconBg: "#00909E",
-  //   date: "August 2022 - Sep 2023",
-  //   points: [
-  //     "Develop interactive UI using Next.js, Redux, and MUI, converting Figma designs into responsive components.",
-  //     "Collaborate with the team for code quality and user-centric experiences while managing code in Git repositories.",
-  //     "Build and maintain frontend applications, integrating third-party libraries, and daily GitHub commits for efficient version control.",
-  //     "Establish and maintain API connections for accurate data integration, while implementing robust data management and error-handling strategies.",
-  //   ],
-  // },
+  {
+    title: "Full Stack Web Developer (Remote)",
+    company_name: "3W",
+    icon: triple_w_solutions,
+    iconBg: "#00909E",
+    date: "August 2023 - Present",
+    points: [
+      "Conducting code reviews and maintaining coding standards & providing technical support and collaboration within the team.",
+      "Expertise in Express.js, TypeScript, and Mongoose for backend operations & utilizing Socket.io for real-time communication.",
+      "Optimizing databases for seamless application performance & developing responsive and user-friendly web applications using React.js.",
+      "Ensuring high-quality, efficient, and well-documented code delivery & staying updated on the latest technological trends.",
+    ],
+  },
   {
     title: "Full Stack Web Developer (Remote)",
     company_name: "Drive lah",
     icon: drive_lah,
     iconBg: "#00909E",
-    date: "July 2023 - Oct 2023",
+    date: "July 2022 - July 2023",
     points: [
       "Develop interactive UI using Next.js, Redux, and MUI, converting Figma designs into responsive components.",
       "Collaborate with the team for code quality and user-centric experiences while managing code in Git repositories.",
@@ -259,7 +259,7 @@ const experiences = [
     company_name: "Geeks of Gurukul",
     icon: gog,
     iconBg: "#00909E",
-    date: "April 2023 - July 2023",
+    date: "April 2022 - June 2022",
     points: [
       "Led and managed a team of 7 developers and 2 UI/UX designers, fostering a productive and cohesive environment.",
       "Thrived on brainstorming, logic building, and meticulously analyzing the workflow to ensure successful project outcomes.",

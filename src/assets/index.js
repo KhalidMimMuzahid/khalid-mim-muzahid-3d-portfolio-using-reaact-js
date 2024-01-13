@@ -43,11 +43,10 @@ import java from "./tech/java.png";
 // for job experiences 
 import gog from "./company/gog.png";
 import job_junction from "./company/job_junction.png";
-import accolite from "./company/accolite.png";
+import triple_w_solutions from "./company/triple_w_solutions_logo.png";
 import drive_lah from "./company/drive_lah.jpeg";
 
-
-// for testimonials 
+// for testimonials
 import city from "./StudentReview/city_university.png";
 import pHero from "./StudentReview/programming-hero.png";
 
@@ -55,11 +54,6 @@ import habib from "./StudentReview/abdullah al habib.png";
 import ajay from "./StudentReview/ajay_katana.png";
 import jacobus from "./StudentReview/jacobus.png";
 import rakib from "./StudentReview/rakib_uddin.png";
-
-
-
-
-
 
 export {
   logoDarkMode,
@@ -73,7 +67,7 @@ export {
   // experience
   gog,
   job_junction,
-  accolite,
+  triple_w_solutions,
   drive_lah,
 
   // testimonials
