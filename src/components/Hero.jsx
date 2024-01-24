@@ -10,7 +10,7 @@ const Hero = () => {
   const { theme, sound } = useContext(UIContext);
   const downloadResume = () => {
     const googleDriveLink =
-      "https://drive.google.com/file/d/1kzy_mYXAwu0neBwzVf4i-eeJYCoRF0PL/view?usp=sharing";
+      "https://drive.google.com/file/d/1n5n-U6eDk-6vFSwefpuV_4FkoGPfOxyh/view?usp=sharing";
 
     // Replace "YOUR_GOOGLE_DRIVE_LINK_HERE" with the actual link to your PDF file on Google Drive.
 
