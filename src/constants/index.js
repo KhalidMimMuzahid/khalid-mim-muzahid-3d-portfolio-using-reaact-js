@@ -4,9 +4,8 @@ import {
   creator,
   web,
   gog,
-  job_junction,
   triple_w_solutions,
-  drive_lah,
+  anttroboticsltd_logo,
   city,
   pHero,
   habib,
@@ -226,32 +225,44 @@ const technologies = [
     icon: threejs,
   },
 ];
+
 // RTK · mongoos · MongoDB · Express.js · Redux.js · React.js
 const experiences = [
   {
-    title: "Full Stack Web Developer (Remote)",
+    title: "Mid-Level Software Engineer (Hybrid)",
+    company_name: "Antt Robotics Ltd",
+    icon: anttroboticsltd_logo,
+    iconBg: "#32979E",
+    date: "March 2024 - Present",
+    points: [
+      "Making high-level technical decisions, cost, and long-term maintainability.",
+      "Mentoring junior & intern developers to improve their skills and problem-solving abilities.",
+      "Prioritizing features and tasks while managing timelines to align with business goals.",
+      "Leading complex projects, focusing on real-time systems, machine learning, & big data.",
+    ],
+  },
+  {
+    title: "Junior Software Engineer (Hybrid)",
+    company_name: "Antt Robotics Ltd",
+    icon: anttroboticsltd_logo,
+    iconBg: "#00909E",
+    date: "March 2023 - February 24",
+    points: [
+      "Translated business requirements into scalable solutions with cross-functional teams.",
+      "Developed and maintained back-end systems that enhanced performance and reliability.",
+      "Wrote clear technical documentation to accelerate team onboarding and project clarity.",
+    ],
+  },
+  {
+    title: "Junior Full Stack Developer (Remote)",
     company_name: "3W",
     icon: triple_w_solutions,
     iconBg: "#00909E",
     date: "August 2023 - Present",
     points: [
-      "Conducting code reviews and maintaining coding standards & providing technical support and collaboration within the team.",
-      "Expertise in Express.js, TypeScript, and Mongoose for backend operations & utilizing Socket.io for real-time communication.",
-      "Optimizing databases for seamless application performance & developing responsive and user-friendly web applications using React.js.",
-      "Ensuring high-quality, efficient, and well-documented code delivery & staying updated on the latest technological trends.",
-    ],
-  },
-  {
-    title: "Full Stack Web Developer (Remote)",
-    company_name: "Drive lah",
-    icon: drive_lah,
-    iconBg: "#00909E",
-    date: "July 2022 - July 2023",
-    points: [
-      "Develop interactive UI using Next.js, Redux, and MUI, converting Figma designs into responsive components.",
-      "Collaborate with the team for code quality and user-centric experiences while managing code in Git repositories.",
-      "Build and maintain frontend applications, integrating third-party libraries, and daily GitHub commits for efficient version control.",
-      "Establish and maintain API connections for accurate data integration, while implementing robust data management and error-handling strategies.",
+      "Translated business requirements into scalable solutions with cross-functional teams.",
+      "Developed and maintained back-end systems that enhanced performance and reliability.",
+      "Wrote clear technical documentation to accelerate team onboarding and project clarity.",
     ],
   },
   {
@@ -261,23 +272,9 @@ const experiences = [
     iconBg: "#00909E",
     date: "April 2022 - June 2022",
     points: [
-      "Led and managed a team of 7 developers and 2 UI/UX designers, fostering a productive and cohesive environment.",
-      "Thrived on brainstorming, logic building, and meticulously analyzing the workflow to ensure successful project outcomes.",
-      "Leveraged proficiency in various technologies, frameworks, and tools to develop robust and scalable web applications.",
-      "Demonstrated a result-oriented professional mindset, consistently delivering high-quality solutions that exceeded client expectations.",
-    ],
-  },
-  {
-    title: "Leadership Development Manager",
-    company_name: "Job Junction - Group Project",
-    icon: job_junction,
-    iconBg: "#00909E",
-    date: "Feb 2022 - March 2022",
-    points: [
-      "Collaborated with designers, developers, and project managers to develop and maintain web applications.",
-      "Wrote clean, maintainable, and efficient code, troubleshooting, debugging & testing, and deploying web applications.",
-      "Stayed up to date with emerging web development trends and technologies.",
-      "Led the planning, logic design, and solution implementation while effectively assigning tasks to team members.",
+      "Developed web apps using full-stack technologies with an emphasis on responsiveness.",
+      "Fostered agile practices and open communication to boost project delivery efficiency.",
+      "Collaborated with designers to implement intuitive, user-centered interfaces.",
     ],
   },
 ];
@@ -295,15 +292,6 @@ const testimonials = [
   // {
 
   {
-    id: 1,
-    heading: "Exceptional Full-stack Developer",
-    description: `Khalid as a Full-stack Web Developer, his expertise in TypeScript, Mongoose, AWS (S3 and EC2), Redux.js, Node.js, and React.js is remarkable. Khalid's passion for his work and effective communication skills make him a valuable asset. He's a collaborative team player and an exceptional problem solver. I wholeheartedly endorse Khalid and have no doubt he will continue to excel in his future endeavors.`,
-    name: "Jacobus Badenhorst",
-    position: "Senior Full stack Developer",
-    img: drive_lah,
-    personImg: jacobus,
-  },
-  {
     id: 2,
     heading: "Ready to Excel in Your Team",
     description: `Khalid's result-oriented approach, clear vision, and deep understanding of project requirements ensured seamless collaboration and on-time project delivery. He consistently developed robust web applications with cutting-edge UI/UX designs that exceeded client expectations.
@@ -313,25 +301,25 @@ const testimonials = [
     img: gog,
     personImg: ajay,
   },
-  {
-    id: 3,
-    heading: "Empowering Innovation and Collaboration",
-    description: `I highly recommend Khalid Mim Muzahid for the Leadership Development Manager role. He demonstrated exceptional skills in web application development, effective planning, and efficient collaboration as part of the Job Junction - Group Project at Programming Hero. His proactive approach and technical expertise will undoubtedly be a valuable addition to your team.`,
-    name: "Abdullah Al Habib",
-    position: "ob Placement Executive",
-    img: pHero,
-    personImg: habib,
-  },
-  {
-    id: 4,
-    heading: "Done his best in the final year project",
-    description: `Khalid's dedication, technical proficiency, and problem-solving abilities were instrumental in the project's success. He played a key role in developing user-friendly functionalities for medicine donation, reselling, and QR/barcode scanning.
-    Moreover, Khalid's teamwork, communication, and professionalism were exemplary, making him an invaluable asset to any team or organization.`,
-    name: "Md. Rakib Uddin",
-    position: "Assistant Professor ",
-    img: city,
-    personImg: rakib,
-  },
+  // {
+  //   id: 3,
+  //   heading: "Empowering Innovation and Collaboration",
+  //   description: `I highly recommend Khalid Mim Muzahid for the Leadership Development Manager role. He demonstrated exceptional skills in web application development, effective planning, and efficient collaboration as part of the Job Junction - Group Project at Programming Hero. His proactive approach and technical expertise will undoubtedly be a valuable addition to your team.`,
+  //   name: "Abdullah Al Habib",
+  //   position: "ob Placement Executive",
+  //   img: pHero,
+  //   personImg: habib,
+  // },
+  // {
+  //   id: 4,
+  //   heading: "Done his best in the final year project",
+  //   description: `Khalid's dedication, technical proficiency, and problem-solving abilities were instrumental in the project's success. He played a key role in developing user-friendly functionalities for medicine donation, reselling, and QR/barcode scanning.
+  //   Moreover, Khalid's teamwork, communication, and professionalism were exemplary, making him an invaluable asset to any team or organization.`,
+  //   name: "Md. Rakib Uddin",
+  //   position: "Assistant Professor ",
+  //   img: city,
+  //   personImg: rakib,
+  // },
 ];
 
 const projects = [

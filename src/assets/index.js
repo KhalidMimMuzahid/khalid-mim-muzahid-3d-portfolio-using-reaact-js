@@ -42,9 +42,8 @@ import java from "./tech/java.png";
 
 // for job experiences 
 import gog from "./company/gog.png";
-import job_junction from "./company/job_junction.png";
 import triple_w_solutions from "./company/triple_w_solutions_logo.png";
-import drive_lah from "./company/drive_lah.jpeg";
+import anttroboticsltd_logo from "./company/anttroboticsltd_logo.png";
 
 // for testimonials
 import city from "./StudentReview/city_university.png";
@@ -66,10 +65,8 @@ export {
 
   // experience
   gog,
-  job_junction,
   triple_w_solutions,
-  drive_lah,
-
+  anttroboticsltd_logo,
   // testimonials
   city,
   pHero,
