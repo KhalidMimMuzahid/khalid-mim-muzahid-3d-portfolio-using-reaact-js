@@ -7,7 +7,7 @@
 3. firebase init
 Answer:
    What do you want to use as your public directory? dist
-   Configure as a single-page app (rewrite all urls to /index.html)? Yes
+   Configure as a single-page app (rewrite all URLs to /index.html)? Yes
    Set up automatic builds and deploys with GitHub? No
    File dist/index.html already exists. Overwrite? No
 
