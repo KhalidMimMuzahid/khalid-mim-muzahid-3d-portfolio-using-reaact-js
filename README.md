@@ -1,6 +1,6 @@
 # khalid-mim-muzahid-3d-portfolio-using-reaact-js
-##Deploy on firebase
 
+##Deploy on firebase
 
 1. npm install -g firebase-tools
 2. firebase login
